@@ -1,0 +1,8 @@
+Code:
+{@bvck} P{ok90}
+A:
+David A. Watt
+Description:
+Programming linguistics
+The first high-level programming languages were designed during the 1950s. Eversince then, programming languages have been a fascinating and productive areaof study. Programmers endlessly debate the relative merits of their favorite pro-gramming languages, sometimes with almost religious zeal. On a more academiclevel, computer scientists search for ways to design programming languages thatcombine expressive power with simplicity and efficiency.We sometimes use the termprogramming linguisticsto mean the study ofprogramming languages. This is by analogy with the older discipline oflinguistics,which is the study of natural languages. Both programming languages and naturallanguages havesyntax(form) andsemantics(meaning). However, we cannot takethe  analogy  too  far.  Natural  languages  are  far  broader,  more  expressive,  andsubtler than programming languages. A natural language  is just what a humanpopulation speaks and writes, so linguists are restricted to analyzing existing (anddead) natural languages. On the other hand, programming linguists can not onlyanalyze  existing  programming  languages;  they  can  also  design  and  specify  newprogramming languages, and they can implement these languages on computers. Programming linguistics therefore has several aspects, which we discuss brieflyin the following subsections.
+
