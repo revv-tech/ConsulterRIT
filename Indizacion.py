@@ -28,20 +28,33 @@ def eliminaEspacios(archivoListas):
 #S: Una lista de los elementos de las
 #D: Lee el archivo, separa sus elementos y los almacena en una lista de sublistas
 
-#LISTA => [[CODE],[AUTOR],[DESCRIPCION]]
 
 def leer(archivo):
-
     lista = []
-    fo = open(archivo,"r")
+    fo = open(archivo, "r")
     reader = csv.reader(fo)
+    #print(reader)
     for row in reader:
-        print(row)
-        segmento = row[0].split(" ")
-        segmento += row[1:]
-        lista.append(segmento)
+        if row:
+            segmentoAux = row[0].split(" ")
+            segmentoCompleto = segmentoAux + eliminaComas(row[1:])
+            lista += segmentoCompleto
 
     return lista
+#=====================
+
+#E: El texto del archivo
+#S: No tiene
+#D: Elimina los comentarios del archivo de texto para convertirlos en lista
+def eliminaComas(segmento):
+    newList = []
+    for row in segmento:
+        raw = row.split(" ")
+        for x in raw:
+            if x != '':
+                newList.append(x)
+
+    return newList
 #E: El path del archivo
 #S:Una lista
 #D:lee un archivo y hace las validaciones para colocarlo en la lista
