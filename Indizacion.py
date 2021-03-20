@@ -1,5 +1,11 @@
+
 import os
 import csv
+import Documentos import Documents
+import Coleccion import Coleccion
+
+#VARIABLES GLOBALES
+listaDeColecciones = []
 
 #==================
 #MANEJO DE ARCHIVOS
@@ -7,6 +13,7 @@ import csv
 #E: El path del archivo, un string con formato de lista
 #S: Ninguna
 #D: Guarda el archivo
+
 def guardar (archivo, strLista):
      fo = open(archivo, "w")
      fo.write(strLista)
@@ -16,6 +23,7 @@ def guardar (archivo, strLista):
 # E: La lista con las sublistas de cada instruccion
 # S: Una lista
 # D: lee la lista y elimina espacios en blanco
+
 def eliminaEspacios(archivoListas):
     for row in archivoListas:
         if "" in row:
@@ -42,6 +50,7 @@ def leer(archivo):
             lista += segmentoCompleto
 
     return lista
+
 #=====================
 
 #E: El texto del archivo
@@ -56,6 +65,8 @@ def eliminaComas(segmento):
                 newList.append(x)
 
     return newList
+
+
 #E: El path del archivo
 #S:Una lista
 #D:lee un archivo y hace las validaciones para colocarlo en la lista
@@ -88,12 +99,16 @@ def directoryRunner():
           contentCarpet = os.listdir(path + "/" + nameCarpet)
           #Lista con los documentos que deben ser aceptados por la terminacion correcta
           filesCarpet = carpetListFilter(contentCarpet)
+          #CREACION DE COLECCION
+          
+          newColeccion = Coleccion(nameCarpet,path + "/" + nameCarpet,filesCarpet)
+
           
           print(nameCarpet)
           print("")
-          print(filesCarpet)
+          print()
 
-
+          
           carpetsMan_ES = carpetsMan_ES[1:]
 
 #Filtrador de Lista de Documentos para que tengan terminacion correcta
