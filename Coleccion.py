@@ -3,6 +3,11 @@ import csv
 import os
 from Documentos import Documents
 
+stopwords = ["a", "ante", "bajo", "cabe", "con", "contra", "de", "desde", "e", "el", "en", "entre", "hacia",
+                  "hasta", "ni", "la", "le", "lo", "los", "las", "o", "para", "pero", "por", "que", "segun", "sin",
+                  "so", "uno", "unas", "unos", "y", "sobre", "tras", "u", "un", "una"]
+
+
 class Coleccion:
 
     def __init__(self,name,path,lista):
@@ -16,12 +21,10 @@ class Coleccion:
         #Longitud Promedio de Documentos
         self.longitudAvg = 0
         #Lista de los documentos nombres
-        self.listaDocs = lista
+        self.listaDocsName = lista
         #Lista Documentos en Objetos
-        self.listaDocsO = []
-        #Stopwords
-        self.stopwords = ["a","ante","bajo","cabe","con","contra", "de","desde","e","el","en","entre","hacia","hasta","ni","la","le","lo","los","las","o","para","pero","por","que","segun","sin","so","uno","unas","unos","y","sobre","tras","u","un","una"]
-        
+        self.listaDocsData = []
+
     #Filtrador de Terminos
     def filterTerms(self,listaDoc):
         
@@ -31,7 +34,7 @@ class Coleccion:
             #Elimina strings vacios de la lista del documento
             if  listaDoc[0] != '':
                 #Filtra los stopwords
-                if  not (listaDoc[0] in self.stopwords):
+                if  not (listaDoc[0] in stopwords):
                     #Agrega el termino a la nueva lista
                     newList.append(listaDoc[0])
             #Siguiente termino
@@ -41,18 +44,18 @@ class Coleccion:
     
     #Crea la lista de Documentos
     def documentCreator(self):
-        if self.listaDocs == []:
+        if self.listaDocsName == []:
             return []
         else:
             idDoc = 0
-            for doc in self.listaDocs:
+            for doc in self.listaDocsName:
                 pathDoc = self.path + "/" + doc
                 #Poner filtrador
                 listaDoc = self.filterTerms(self.leerDoc(pathDoc))
                 #Nuevo Doc
                 newDoc = Documents(listaDoc,idDoc,pathDoc,doc)
                 #Agregar doc
-                self.listaDocsO.append(newDoc)
+                self.listaDocsData.append(newDoc)
                 newDoc.printDoc()
                 idDoc = idDoc + 1
             return
@@ -80,20 +83,15 @@ class Coleccion:
                     newList.append(x)
 
         return newList
-    
-    def cargarArchivo(self,archivo):
-        strResultado = leer(archivo)
-        if strResultado != "":
-            return strResultado
-        else:
-            return []
-        
-    
+
     def printColeccion(self):
         print("Nombre de Coleccion: ",self.name)
         print("Path: ",self.path)
         print("Cantidad de Docs: ",self.cantDoc)
         print("Cantidad Promedio Long.: ",self.longitudAvg)
-        print("Lista de los documentos: ",self.listaDocs)
+        print("Lista de los documentos: ", self.listaDocsName)
         print("")
         return
+
+    #def formatearTexto(self):
+
