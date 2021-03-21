@@ -1,8 +1,8 @@
 
 import os
 import csv
-import Documentos import Documents
-import Coleccion import Coleccion
+from Documentos import Documents
+from Coleccion import Coleccion
 
 #VARIABLES GLOBALES
 listaDeColecciones = []
@@ -78,7 +78,7 @@ def cargarArchivo(archivo):
           return []
 
 #PRUEBA
-nameFile = "prueba.txt"
+nameFile = "C:/Users/Marco/Desktop/Documentos TEC/ConsulterRIT/man.es/man1/411toppm.1"
 #print(cargarArchivo(nameFile))
 
 #LEER DIRECTORIOS
@@ -100,13 +100,11 @@ def directoryRunner():
           #Lista con los documentos que deben ser aceptados por la terminacion correcta
           filesCarpet = carpetListFilter(contentCarpet)
           #CREACION DE COLECCION
-          
           newColeccion = Coleccion(nameCarpet,path + "/" + nameCarpet,filesCarpet)
-
           
-          print(nameCarpet)
-          print("")
-          print()
+          #Crea lista de Documentos
+          newColeccion.documentCreator()
+          #newColeccion.printColeccion()
 
           
           carpetsMan_ES = carpetsMan_ES[1:]
