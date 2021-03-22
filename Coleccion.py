@@ -54,10 +54,14 @@ class Coleccion:
                 listaDoc = self.filterTerms(self.leerDoc(pathDoc))
                 #Nuevo Doc
                 newDoc = Documents(listaDoc,idDoc,pathDoc,doc)
+                newDoc.docCalcs()
                 #Agregar doc
                 self.listaDocsData.append(newDoc)
-                newDoc.printDoc()
+                #newDoc.printDoc()
                 idDoc = idDoc + 1
+
+            self.cantDoc = idDoc
+            self.calcProm()
             return
     
     def leerDoc(self,archivo):
@@ -84,6 +88,14 @@ class Coleccion:
 
         return newList
 
+    def calcProm(self):
+        prom = 0
+        for doc in self.listaDocsData:
+            
+            prom = prom + doc.longitud
+            
+        self.longitudAvg = prom/len(self.listaDocsData)
+            
     def printColeccion(self):
         print("Nombre de Coleccion: ",self.name)
         print("Path: ",self.path)

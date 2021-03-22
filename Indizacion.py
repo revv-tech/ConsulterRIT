@@ -80,7 +80,7 @@ def cargarArchivo(archivo):
 
 #PRUEBA
 nameFile = "C:/Users/Marco/Desktop/Documentos TEC/ConsulterRIT/man.es/man1/411toppm.1"
-#print(cargarArchivo(nameFile))
+
 
 #LEER DIRECTORIOS
 #E: No tiene
@@ -89,8 +89,8 @@ nameFile = "C:/Users/Marco/Desktop/Documentos TEC/ConsulterRIT/man.es/man1/411to
 
 def directoryRunner():
      #Path
-     #path = "/Users/Marco/Desktop/Documentos TEC/ConsulterRIT/man.es"
-     path = "H:/Programming/Python/Code/ConsulterRIT/man.es"
+     path = "/Users/Marco/Desktop/Documentos TEC/ConsulterRIT/man.es"
+     #path = "H:/Programming/Python/Code/ConsulterRIT/man.es"
      #Subcarpetas de Man.es
      carpetsMan_ES =  os.listdir(path)
      #Ciclo que crea listas con los nombres de los documentos que si son aceptados para el proceso
@@ -106,17 +106,15 @@ def directoryRunner():
 
           #Crea lista de Documentos
           newColeccion.documentCreator()
-          #newColeccion.printColeccion()
-
-
+          newColeccion.printColeccion()
+          return
           carpetsMan_ES = carpetsMan_ES[1:]
 
 #Filtrador de Lista de Documentos para que tengan terminacion correcta
 def carpetListFilter(listFiles):
-     #terminations = [".1",".2",".3",".4",".5",".6",".7",".8"]
      correctFiles = []
      for elem in listFiles:
-          if re.match(".[12345678]", elem[len(elem)-2:]):
+          if re.match("\.[12345678]", elem[len(elem)-2:]):
                correctFiles.append(elem)
      return correctFiles
 
