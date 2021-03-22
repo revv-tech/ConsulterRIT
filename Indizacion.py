@@ -1,24 +1,24 @@
-
 import os
 import csv
 import re
 from Documentos import Documents
 from Coleccion import Coleccion
 
-#VARIABLES GLOBALES
+# VARIABLES GLOBALES
 listaDeColecciones = []
 
-#==================
-#MANEJO DE ARCHIVOS
-#==================
-#E: El path del archivo, un string con formato de lista
-#S: Ninguna
-#D: Guarda el archivo
 
-def guardar (archivo, strLista):
-     fo = open(archivo, "w")
-     fo.write(strLista)
-     fo.close()
+# ==================
+# MANEJO DE ARCHIVOS
+# ==================
+# E: El path del archivo, un string con formato de lista
+# S: Ninguna
+# D: Guarda el archivo
+
+def guardar(archivo, strLista):
+    fo = open(archivo, "w")
+    fo.write(strLista)
+    fo.close()
 
 
 # E: La lista con las sublistas de cada instruccion
@@ -34,16 +34,16 @@ def eliminaEspacios(archivoListas):
     return archivoListas
 
 
-#E: El texto de un archivo
-#S: Una lista de los elementos de las
-#D: Lee el archivo, separa sus elementos y los almacena en una lista de sublistas
+# E: El texto de un archivo
+# S: Una lista de los elementos de las
+# D: Lee el archivo, separa sus elementos y los almacena en una lista de sublistas
 
 
 def leer(archivo):
     lista = []
     fo = open(archivo, "r")
     reader = csv.reader(fo)
-    #print(reader)
+    # print(reader)
     for row in reader:
         if row:
             segmentoAux = row[0].split(" ")
@@ -52,11 +52,12 @@ def leer(archivo):
 
     return lista
 
-#=====================
 
-#E: El texto del archivo
-#S: No tiene
-#D: Elimina los comentarios del archivo de texto para convertirlos en lista
+# =====================
+
+# E: El texto del archivo
+# S: No tiene
+# D: Elimina los comentarios del archivo de texto para convertirlos en lista
 def eliminaComas(segmento):
     newList = []
     for row in segmento:
@@ -68,24 +69,25 @@ def eliminaComas(segmento):
     return newList
 
 
-#E: El path del archivo
-#S:Una lista
-#D:lee un archivo y hace las validaciones para colocarlo en la lista
+# E: El path del archivo
+# S:Una lista
+# D:lee un archivo y hace las validaciones para colocarlo en la lista
 def cargarArchivo(archivo):
-     strResultado = leer(archivo)
-     if strResultado != "":
-          return strResultado
-     else:
-          return []
+    strResultado = leer(archivo)
+    if strResultado != "":
+        return strResultado
+    else:
+        return []
 
-#PRUEBA
+
+# PRUEBA
 nameFile = "C:/Users/Marco/Desktop/Documentos TEC/ConsulterRIT/man.es/man1/411toppm.1"
+# print(cargarArchivo(nameFile))
 
-
-#LEER DIRECTORIOS
-#E: No tiene
-#S: Aun no se
-#D: Revisa los files de cada carpeta del directorio Man.es y hace una lista con los nombres de sus files
+# LEER DIRECTORIOS
+# E: No tiene
+# S: Aun no se
+# D: Revisa los files de cada carpeta del directorio Man.es y hace una lista con los nombres de sus files
 
 def directoryRunner():
      #Path
@@ -110,13 +112,15 @@ def directoryRunner():
           return
           carpetsMan_ES = carpetsMan_ES[1:]
 
-#Filtrador de Lista de Documentos para que tengan terminacion correcta
+# Filtrador de Lista de Documentos para que tengan terminacion correcta
 def carpetListFilter(listFiles):
-     correctFiles = []
-     for elem in listFiles:
-          if re.match("\.[12345678]", elem[len(elem)-2:]):
-               correctFiles.append(elem)
-     return correctFiles
+    # terminations = [".1",".2",".3",".4",".5",".6",".7",".8"]
+    correctFiles = []
+    for elem in listFiles:
+        if re.match("\.[12345678]", elem[-2:]):
+            correctFiles.append(elem)
+    return correctFiles
+
+
 
 directoryRunner()
-
