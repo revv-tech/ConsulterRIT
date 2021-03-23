@@ -43,6 +43,7 @@ class Coleccion:
         # Retorna lista de terminos adecuados al formato
         newList = self.joinWords(newList)
         newList = self.splitDots(newList)
+        newList = self.searchParameters(newList)
         return newList
 
     # Crea la lista de Documentos
@@ -124,9 +125,10 @@ class Coleccion:
             cont += 1
         return listWords
 
-    def splitDots(self, listWords): #Arreglar el caso de "asd..f" = ["asd", "f"]
+    # noinspection PyUnreachableCode
+    def splitDots(self, listWords):
         for word in listWords:
-            if word[0] != "." and word[-1:] != '.':
+            if word[0] != "." and word[-1:] != '.' and not re.search("\.\.", word):
                 listSplited = word.split(".")
                 with suppress(ValueError):
                     while True:
@@ -136,3 +138,12 @@ class Coleccion:
                         if re.match(".?[A-Za-z].?", fragment):
                             listWords.append(fragment)
         return listWords
+
+    def searchParameters(self, listWords):
+        for word in listWords:
+            if word[:2] == "--":
+                listWords.append(word[2:])
+                listWords.append("@" + word[2:])
+                listWords.remove(word)
+        return listWords
+    #
