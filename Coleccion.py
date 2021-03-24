@@ -2,14 +2,16 @@
 import csv
 import os
 import re
+import math
 from contextlib import suppress
 from Documentos import Documents
+from Terminos import Termino
 
 stopwords = ["a", "ante", "bajo", "cabe", "con", "contra", "de", "desde", "e", "el", "en", "entre", "hacia",
              "hasta", "ni", "la", "le", "lo", "los", "las", "o", "para", "pero", "por", "que", "segun", "sin",
              "so", "uno", "unas", "unos", "y", "sobre", "tras", "u", "un", "una"]
-
-
+        
+        
 class Coleccion:
 
     def __init__(self, name, path, lista):
@@ -26,6 +28,8 @@ class Coleccion:
         self.listaDocsName = lista
         # Lista Documentos en Objetos
         self.listaDocsData = []
+        # Lista con el vocabulario de la coleccion
+        self.vocabulario = []
 
     # Filtrador de Terminos
     def filterTerms(self, listaDoc):
@@ -54,25 +58,43 @@ class Coleccion:
             idDoc = 0
             for doc in self.listaDocsName:
                 pathDoc = self.path + "/" + doc
-                # Poner filtrador
+                # Lista filtrada con los terminos de doc
                 listaDoc = self.filterTerms(self.leerDoc(pathDoc))
-#<<<<<<< Updated upstream
+
                 #Nuevo Doc
                 newDoc = Documents(listaDoc,idDoc,pathDoc,doc)
                 newDoc.docCalcs()
+                #Agrega terminos a vocabulario de coleccion
+                self.termAdder(newDoc.pares)
                 #Agregar doc
                 self.listaDocsData.append(newDoc)
                 #newDoc.printDoc()
                 idDoc = idDoc + 1
 
             self.cantDoc = idDoc
+            
             self.calcProm()
+            
             return
-        """"=======
-                        # Nuevo Doc
-                        newDoc = Documents(listaDoc, idDoc, pathDoc, doc)
-                        # Agregar doc
-        >>>>>>> Stashed changes"""
+
+    #Funcion que agrega los terminos de cada documento
+    def termAdder(self,listaPares):
+        for par in listaPares:
+
+            term = par[0]
+            
+            for termData in self.vocabulario:
+
+                if par[0] == termData.term:
+                    termData.ni = termData.ni + 1
+
+            else:
+                
+                newTerm = Termino(term,1)
+                self.vocabulario.append(newTerm)
+            
+        return
+
 
     def leerDoc(self, archivo):
         lista = []
@@ -113,6 +135,10 @@ class Coleccion:
         print("Cantidad Promedio Long.: ", self.longitudAvg)
         print("Lista de los documentos: ", self.listaDocsName)
         print("")
+        print("Vocabulario de la Coleccion: ")
+        for term in self.vocabulario:
+            if term.ni > 0:
+                term.print()
         return
 
     def joinWords(self, listWords):
