@@ -45,9 +45,7 @@ class Coleccion:
             # Siguiente termino
             listaDoc = listaDoc[1:]
         # Retorna lista de terminos adecuados al formato
-        newList = self.joinWords(newList)
-        newList = self.splitDots(newList)
-        newList = self.searchParameters(newList)
+        self.cleanList(newList)
         return newList
 
     # Crea la lista de Documentos
@@ -141,35 +139,40 @@ class Coleccion:
                 term.print()
         return
 
-    def joinWords(self, listWords):
-        cont = 1
-        while cont < len(listWords):
-            word = listWords[cont - 1]
-            if word[-1:] == '-' and listWords[cont] != '':
-                listWords[cont - 1] = word.removesuffix('-') + listWords[cont]
-                listWords.pop(cont)
-            cont += 1
-        return listWords
+    def joinWords(self, listWords, cont):
+        word = listWords[cont - 1]
+        if word[-1:] == '-' and listWords[cont] != '':
+            listWords[cont - 1] = word.removesuffix('-') + listWords[cont]
+            listWords.pop(cont)
+        return
 
     # noinspection PyUnreachableCode
-    def splitDots(self, listWords):
-        for word in listWords:
-            if word[0] != "." and word[-1:] != '.' and not re.search("\.\.", word):
-                listSplited = word.split(".")
-                with suppress(ValueError):
-                    while True:
-                        listSplited.remove("")
-                if len(listSplited) > 1:
-                    for fragment in listSplited:
-                        if re.match(".?[A-Za-z].?", fragment):
-                            listWords.append(fragment)
-        return listWords
+    def splitDots(self, listWords, word):
+        if word[0] != "." and word[-1:] != '.' and not re.search("\.\.", word):
+            listSplited = word.split(".")
+            with suppress(ValueError):
+                while True:
+                    listSplited.remove("")
+            if len(listSplited) > 1:
+                for fragment in listSplited:
+                    if re.match(".?[A-Za-z].?", fragment):
+                        listWords.append(fragment)
+        else:
+            listWords.remove(word)
+        return
 
-    def searchParameters(self, listWords):
-        for word in listWords:
-            if word[:2] == "--":
-                listWords.append(word[2:])
-                listWords.append("@" + word[2:])
-                listWords.remove(word)
-        return listWords
-    #
+    def searchParameters(self, listWords, word):
+        if word[:2] == "--":
+            listWords.append(word[2:])
+            listWords.append("@" + word[2:])
+            listWords.remove(word)
+        return
+
+    def cleanList(self, pListWords):
+        cont = 0
+        while cont < len(pListWords):
+            self.joinWords(pListWords, cont + 1)
+            self.searchParameters(pListWords, pListWords[cont])
+            self.splitDots(pListWords, pListWords[cont])
+            cont += 1
+        return

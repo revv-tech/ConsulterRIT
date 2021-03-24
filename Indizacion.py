@@ -89,8 +89,8 @@ nameFile = "C:/Users/Marco/Desktop/Documentos TEC/ConsulterRIT/man.es/man1/411to
 
 def directoryRunner():
      #Path
-     path = "/Users/Marco/Desktop/Documentos TEC/ConsulterRIT/man.es"
-     #path = "H:/Programming/Python/Code/ConsulterRIT/man.es"
+     #path = "/Users/Marco/Desktop/Documentos TEC/ConsulterRIT/man.es"
+     path = "H:/Programming/Python/Code/ConsulterRIT/man.es"
      #Subcarpetas de Man.es
      carpetsMan_ES =  os.listdir(path)
      #Cantidad de Documentos
