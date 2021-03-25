@@ -1,8 +1,6 @@
 # Coleccion
 import csv
-import os
 import re
-import math
 from contextlib import suppress
 from Documentos import Documents
 from Terminos import Termino
@@ -76,19 +74,23 @@ class Coleccion:
 
     #Funcion que agrega los terminos de cada documento
     def termAdder(self,listaPares):
+
         for par in listaPares:
+
             term = par[0]
+
             for termData in self.vocabulario:
 
-                if par[0] == termData.term:
-                    termData.ni = termData.ni + 1
+                if term == termData.term:
+                    termData.addNi()
+                    break
 
             else:
-                
+
                 newTerm = Termino(term,1)
                 self.vocabulario.append(newTerm)
-            
-        return
+
+
 
 
     def leerDoc(self, archivo):
@@ -133,6 +135,7 @@ class Coleccion:
         print("Vocabulario de la Coleccion: ")
         for term in self.vocabulario:
             if term.term == "you":
+                print(term)
                 term.print()
         return
 

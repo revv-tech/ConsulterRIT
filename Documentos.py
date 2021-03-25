@@ -61,7 +61,6 @@ class Documents:
             self.longitud = self.longitud + dic[elem]
             par = [elem,dic[elem]]
             pares.append(par)
-            
         self.pares = pares
            
     

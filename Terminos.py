@@ -18,7 +18,9 @@ class Termino:
             self.idf = 0
         else:
             self.idf = idf
- 
+    def addNi(self):
+        self.ni = self.ni + 1
+
     def print(self):
         print("")
         print("Termino: ", self.term)
