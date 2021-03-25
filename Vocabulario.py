@@ -36,5 +36,5 @@ class Vocabulario:
         print("Cantidad Documentos: ", self.N)
         print("Vocabulario General: ")
         for term in self.terms:
-            if term.ni>0:
+            if term.ni>3:
                 term.print()

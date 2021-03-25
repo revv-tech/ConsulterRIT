@@ -13,7 +13,7 @@ class Termino:
 
     def calcIDF(self,N):
         
-        self.idf = math.log((((N-self.ni-0.5))/((self.ni-0.5) )),2)
+        self.idf = math.log(((N - self.ni - 0.5) / (self.ni - 0.5)), 2)
  
     def print(self):
         print("")

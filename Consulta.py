@@ -1,0 +1,2 @@
+from Vocabulario import Vocabulario
+
