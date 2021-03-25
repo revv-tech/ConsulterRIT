@@ -12,8 +12,12 @@ class Termino:
         self.idf = 0
 
     def calcIDF(self,N):
-        
-        self.idf = math.log((((N-self.ni-0.5))/((self.ni-0.5) )),2)
+
+        idf = math.log((((N - self.ni - 0.5)) / ((self.ni - 0.5))), 2)
+        if idf < 0:
+            self.idf = 0
+        else:
+            self.idf = idf
  
     def print(self):
         print("")

@@ -1,14 +1,13 @@
 import os
 import csv
 import re
-from Documentos import Documents
 from Coleccion import Coleccion
 from Vocabulario import Vocabulario
 
 
-# ==================
-# MANEJO DE ARCHIVOS
-# ==================
+# ================== #
+# MANEJO DE ARCHIVOS #
+# ================== #
 # E: El path del archivo, un string con formato de lista
 # S: Ninguna
 # D: Guarda el archivo
@@ -89,8 +88,7 @@ nameFile = "C:/Users/Marco/Desktop/Documentos TEC/ConsulterRIT/man.es/man1/411to
 
 def directoryRunner():
      #Path
-     #path = "/Users/Marco/Desktop/Documentos TEC/ConsulterRIT/man.es"
-     path = "H:/Programming/Python/Code/ConsulterRIT/man.es"
+     path =  "../ConsulterRIT/man.es"
      #Subcarpetas de Man.es
      carpetsMan_ES =  os.listdir(path)
      #Cantidad de Documentos
@@ -102,20 +100,18 @@ def directoryRunner():
      #Ciclo que crea listas con los nombres de los documentos que si son aceptados para el proceso
      while i:
           #Saca el nombre de cada subcarpeta de Man.es
-          nameCarpet = "man6"
+          nameCarpet = "man4"
           #Saca la lista de Archivos de Man.es
           contentCarpet = os.listdir(path + "/" + nameCarpet)
           #Lista con los documentos que deben ser aceptados por la terminacion correcta
           filesCarpet = carpetListFilter(contentCarpet)
           #CREACION DE COLECCION
           newColeccion = Coleccion(nameCarpet,path + "/" + nameCarpet,filesCarpet)
-
           #Crea lista de Documentos
           newColeccion.documentCreator()
           #Actualizar cantidad de Documentos
           N = N + newColeccion.cantDoc
-          
-          #newColeccion.printColeccion()
+          newColeccion.printColeccion()
           #Agrega termino al vocabulario
           Vocab.addTerms(newColeccion.vocabulario)
           i = i - 1
@@ -124,8 +120,9 @@ def directoryRunner():
      Vocab.N = N
      #Calcula el idf para cada termino
      Vocab.calcIDF()
+     #Vocab.sortVoc()
      #Imprime el vocabulario
-     Vocab.print()
+     #Vocab.print()
      return
 
 
@@ -134,8 +131,10 @@ def carpetListFilter(listFiles):
     
     correctFiles = []
     for elem in listFiles:
+
         if re.match("\.[12345678]", elem[-2:]):
             correctFiles.append(elem)
+
     return correctFiles
 
 

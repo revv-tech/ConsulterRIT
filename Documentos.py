@@ -2,12 +2,12 @@
 
 class Documents:
 
-    def __init__(self,listDoc,docID,path,nameDoc):
+    def __init__(self,docID,path,nameDoc):
 
         #Nombre del Doc
         self.name = nameDoc
         #Lista de Terminos del Documento
-        self.listDoc = listDoc
+        #self.listDoc = listDoc
         #Numero consecutivo unico generado aleatoriamente
         self.docID = docID
         #Ruta del Documento
@@ -35,25 +35,22 @@ class Documents:
         print("")
         print("Diccionario: ", self.dic)
         print("")
-        print("Lista Doc: ")
-        print(self.listDoc)
-        print("")
         return
     
     #Dada la lista filtrada del documentos
-    def docCalcs(self):
+    def docCalcs(self,listDoc):
         
-        alphabeticList = sorted(set(self.listDoc))
-        self.dic = dict((term,self.listDoc.count(term)) for term in set(self.listDoc))
+        alphabeticList = sorted(set(listDoc))
+        self.dic = dict((term,listDoc.count(term)) for term in set(listDoc))
         self.cantTerms = len(self.dic)
         self.listPares(alphabeticList,self.dic)
         
-        if len(self.listDoc) <= 200:
-            self.descrip = self.listDoc
+        if len(listDoc) <= 200:
+            self.descrip = listDoc
         else:
             i = 0
             while i < 200:
-                self.descrip.append(self.listDoc[i])
+                self.descrip.append(listDoc[i])
                 i = i + 1
 
     def listPares(self,alphList,dic):

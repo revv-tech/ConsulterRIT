@@ -28,13 +28,18 @@ class Vocabulario:
 
                         termOficial.ni = termOficial.ni + elem.ni
 
-                    else:
+                else:
 
-                        self.terms.append(elem)
+                    self.terms.append(elem)
+
+    #Ordena Vocabulario Alfabeticamente
+    def sortVoc(self):
+        self.terms = sorted(self.terms, key=lambda x: x.term, reverse=True)
+
     def print(self):
         print("Vocabulario")
         print("Cantidad Documentos: ", self.N)
         print("Vocabulario General: ")
         for term in self.terms:
-            if term.ni>0:
+            if term.term > 1:
                 term.print()

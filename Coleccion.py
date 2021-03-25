@@ -58,10 +58,9 @@ class Coleccion:
                 pathDoc = self.path + "/" + doc
                 # Lista filtrada con los terminos de doc
                 listaDoc = self.filterTerms(self.leerDoc(pathDoc))
-
                 #Nuevo Doc
-                newDoc = Documents(listaDoc,idDoc,pathDoc,doc)
-                newDoc.docCalcs()
+                newDoc = Documents(idDoc,pathDoc,doc)
+                newDoc.docCalcs(listaDoc)
                 #Agrega terminos a vocabulario de coleccion
                 self.termAdder(newDoc.pares)
                 #Agregar doc
@@ -78,9 +77,7 @@ class Coleccion:
     #Funcion que agrega los terminos de cada documento
     def termAdder(self,listaPares):
         for par in listaPares:
-
             term = par[0]
-            
             for termData in self.vocabulario:
 
                 if par[0] == termData.term:
@@ -135,7 +132,7 @@ class Coleccion:
         print("")
         print("Vocabulario de la Coleccion: ")
         for term in self.vocabulario:
-            if term.ni > 0:
+            if term.term == "you":
                 term.print()
         return
 
