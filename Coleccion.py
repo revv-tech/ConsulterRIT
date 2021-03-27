@@ -7,8 +7,7 @@ from Terminos import Termino
 
 stopwords = ["a", "ante", "bajo", "cabe", "con", "contra", "de", "desde", "e", "el", "en", "entre", "hacia",
              "hasta", "ni", "la", "le", "lo", "los", "las", "o", "para", "pero", "por", "que", "segun", "sin",
-             "so", "uno", "unas", "unos", "y", "sobre", "tras", "u", "un", "una"]
-        
+             "so", "uno", "unas", "unos", "y", "sobre", "tras", "u", "un", "una"]        
         
 class Coleccion:
 
@@ -56,14 +55,14 @@ class Coleccion:
                 pathDoc = self.path + "/" + doc
                 # Lista filtrada con los terminos de doc
                 listaDoc = self.filterTerms(self.leerDoc(pathDoc))
-                #Nuevo Doc
-                newDoc = Documents(idDoc,pathDoc,doc)
+                # Nuevo Doc
+                newDoc = Documents(idDoc, pathDoc, doc)
                 newDoc.docCalcs(listaDoc)
-                #Agrega terminos a vocabulario de coleccion
+                # Agrega terminos a vocabulario de coleccion
                 self.termAdder(newDoc.pares)
-                #Agregar doc
+                # Agregar doc
                 self.listaDocsData.append(newDoc)
-                #newDoc.printDoc()
+                # newDoc.printDoc()
                 idDoc = idDoc + 1
 
             self.cantDoc = idDoc
@@ -72,8 +71,8 @@ class Coleccion:
             
             return
 
-    #Funcion que agrega los terminos de cada documento
-    def termAdder(self,listaPares):
+    # Funcion que agrega los terminos de cada documento
+    def termAdder(self, listaPares):
 
         for par in listaPares:
 
@@ -87,7 +86,7 @@ class Coleccion:
 
             else:
 
-                newTerm = Termino(term,1)
+                newTerm = Termino(term, 1)
                 self.vocabulario.append(newTerm)
 
 
@@ -148,6 +147,7 @@ class Coleccion:
 
     # noinspection PyUnreachableCode
     def splitDots(self, listWords, word):
+ if word != '':
         if word[0] != "." and word[-1:] != '.' and not re.search("\.\.", word):
             listSplited = word.split(".")
             with suppress(ValueError):
@@ -155,7 +155,7 @@ class Coleccion:
                     listSplited.remove("")
             if len(listSplited) > 1:
                 for fragment in listSplited:
-                    if re.match(".?[A-Za-z].?", fragment):
+                    if re.match(".?[A-Za-z].?", fragment):  
                         listWords.append(fragment)
         else:
             listWords.remove(word)
@@ -167,10 +167,20 @@ class Coleccion:
             listWords.append("@" + word[2:])
             listWords.remove(word)
         return
+      
+def deleteChars(self, word):
+        if word[0] == '\"' or word[0] == '(':
+            word = word[1:]
+        if re.match("[\":]", word[-1:]):
+            word = word[:-1]
+        if word[-1:] == ')' and not re.search("\(", word):
+            word = word[:-1]
+        return word
 
     def cleanList(self, pListWords):
         cont = 0
         while cont < len(pListWords):
+            pListWords[cont] = self.deleteChars(pListWords[cont])
             self.joinWords(pListWords, cont + 1)
             self.searchParameters(pListWords, pListWords[cont])
             self.splitDots(pListWords, pListWords[cont])
