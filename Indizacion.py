@@ -98,9 +98,9 @@ def directoryRunner():
      Vocab = Vocabulario()
      i = 1
      #Ciclo que crea listas con los nombres de los documentos que si son aceptados para el proceso
-     while i:
+     while i > 0:
           #Saca el nombre de cada subcarpeta de Man.es
-          nameCarpet = "man4"
+          nameCarpet = carpetsMan_ES[0]
           #Saca la lista de Archivos de Man.es
           contentCarpet = os.listdir(path + "/" + nameCarpet)
           #Lista con los documentos que deben ser aceptados por la terminacion correcta

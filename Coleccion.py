@@ -129,10 +129,7 @@ class Coleccion:
         print("Lista de los documentos: ", self.listaDocsName)
         print("")
         print("Vocabulario de la Coleccion: ")
-        for term in self.vocabulario:
-            if term.term == "you":
-                print(term)
-                term.print()
+        print(self.vocabulario)
         return
 
     def joinWords(self, listWords, cont):
