@@ -89,9 +89,6 @@ class Coleccion:
                 newTerm = Termino(term, 1)
                 self.vocabulario.append(newTerm)
 
-
-
-
     def leerDoc(self, archivo):
         lista = []
         fo = open(archivo, "r")
@@ -140,23 +137,23 @@ class Coleccion:
 
     def joinWords(self, listWords, cont):
         word = listWords[cont - 1]
-        if word[-1:] == '-' and listWords[cont] != '':
+        if (word[-1:] == '-' or word[-1:] == '­') and listWords[cont] != '':
             listWords[cont - 1] = word.removesuffix('-') + listWords[cont]
             listWords.pop(cont)
         return
 
     # noinspection PyUnreachableCode
     def splitDots(self, listWords, word):
- if word != '':
-        if word[0] != "." and word[-1:] != '.' and not re.search("\.\.", word):
-            listSplited = word.split(".")
-            with suppress(ValueError):
-                while True:
-                    listSplited.remove("")
-            if len(listSplited) > 1:
-                for fragment in listSplited:
-                    if re.match(".?[A-Za-z].?", fragment):  
-                        listWords.append(fragment)
+        if word != '':
+            if word[0] != "." and word[-1:] != '.' and not re.search("\.\.", word):
+                listSplited = word.split(".")
+                with suppress(ValueError):
+                    while True:
+                        listSplited.remove("")
+                if len(listSplited) > 1:
+                    for fragment in listSplited:
+                        if re.match(".?[A-Za-z].?", fragment):
+                            listWords.append(fragment)
         else:
             listWords.remove(word)
         return
@@ -168,7 +165,7 @@ class Coleccion:
             listWords.remove(word)
         return
       
-def deleteChars(self, word):
+    def deleteChars(self, word):
         if word[0] == '\"' or word[0] == '(':
             word = word[1:]
         if re.match("[\":]", word[-1:]):
