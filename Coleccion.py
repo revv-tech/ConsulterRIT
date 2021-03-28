@@ -175,7 +175,8 @@ class Coleccion:
         cont = 0
         while cont < len(pListWords):
             pListWords[cont] = self.deleteChars(pListWords[cont])
-            self.joinWords(pListWords, cont + 1)
+            if cont != len(pListWords) - 1:
+                self.joinWords(pListWords, cont + 1)
             self.searchParameters(pListWords, pListWords[cont])
             self.splitDots(pListWords, pListWords[cont])
             cont += 1
