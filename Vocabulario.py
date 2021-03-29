@@ -6,6 +6,7 @@ class Vocabulario:
 
         self.N = 0
         self.terms = []
+        self.avgdl = 0
     
     def calcIDF(self):
         for term in self.terms:

@@ -4,6 +4,9 @@ import re
 from Coleccion import Coleccion
 from Vocabulario import Vocabulario
 
+COLECCTIONS = []
+VOCABULARY = Vocabulario()
+
 
 # ================== #
 # MANEJO DE ARCHIVOS #
@@ -79,6 +82,8 @@ def cargarArchivo(archivo):
 
 # PRUEBA
 nameFile = "C:/Users/Marco/Desktop/Documentos TEC/ConsulterRIT/man.es/man1/411toppm.1"
+
+
 # print(cargarArchivo(nameFile))
 
 # LEER DIRECTORIOS
@@ -87,48 +92,49 @@ nameFile = "C:/Users/Marco/Desktop/Documentos TEC/ConsulterRIT/man.es/man1/411to
 # D: Revisa los files de cada carpeta del directorio Man.es y hace una lista con los nombres de sus files
 
 def directoryRunner():
-     #Path
-     path =  "../ConsulterRIT/man.es"
-     #Subcarpetas de Man.es
-     carpetsMan_ES =  os.listdir(path)
-     #Cantidad de Documentos
-     N = 0
-     #Vocabulario
-     #Crea vocabulario
-     Vocab = Vocabulario()
-     i = 1
-     #Ciclo que crea listas con los nombres de los documentos que si son aceptados para el proceso
-     while i > 0:
-          #Saca el nombre de cada subcarpeta de Man.es
-          nameCarpet = carpetsMan_ES[0]
-          #Saca la lista de Archivos de Man.es
-          contentCarpet = os.listdir(path + "/" + nameCarpet)
-          #Lista con los documentos que deben ser aceptados por la terminacion correcta
-          filesCarpet = carpetListFilter(contentCarpet)
-          #CREACION DE COLECCION
-          newColeccion = Coleccion(nameCarpet,path + "/" + nameCarpet,filesCarpet)
-          #Crea lista de Documentos
-          newColeccion.documentCreator()
-          #Actualizar cantidad de Documentos
-          N = N + newColeccion.cantDoc
-          newColeccion.printColeccion()
-          #Agrega termino al vocabulario
-          Vocab.addTerms(newColeccion.vocabulario)
-          i = i - 1
-          carpetsMan_ES = carpetsMan_ES[1:]
-     #Agrega la cantidad de documentos al vocabulario
-     Vocab.N = N
-     #Calcula el idf para cada termino
-     Vocab.calcIDF()
-     #Vocab.sortVoc()
-     #Imprime el vocabulario
-     #Vocab.print()
-     return
+    # Path
+    path = "../ConsulterRIT/man.es"
+    # Subcarpetas de Man.es
+    carpetsMan_ES = os.listdir(path)
+    # Cantidad de Documentos
+    N = 0
+    # Crea vocabulario
+    i = 1
+    global VOCABULARY
+    # Ciclo que crea listas con los nombres de los documentos que si son aceptados para el proceso
+    while i > 0:
+        # Saca el nombre de cada subcarpeta de Man.es
+        nameCarpet = "man4"
+        # Saca la lista de Archivos de Man.es
+        contentCarpet = os.listdir(path + "/" + nameCarpet)
+        # Lista con los documentos que deben ser aceptados por la terminacion correcta
+        filesCarpet = carpetListFilter(contentCarpet)
+        # CREACION DE COLECCION
+        newColeccion = Coleccion(nameCarpet, path + "/" + nameCarpet, filesCarpet)
+        # Crea lista de Documentos
+        newColeccion.documentCreator()
+        # Actualizar cantidad de Documentos
+        N = N + newColeccion.cantDoc
+        newColeccion.printColeccion()
+        # Agrega termino al vocabulario
+        VOCABULARY.addTerms(newColeccion.vocabulario)
+        # Agregar a COLECCTIONS
+        COLECCTIONS.append(newColeccion)
+        VOCABULARY.avgdl += COLECCTIONS[0].longitudAvg  # DESCOMPONER LISTA
+        i -= 1
+        carpetsMan_ES = carpetsMan_ES[1:]
+    # Agrega la cantidad de documentos al vocabulario
+    VOCABULARY.N = N
+    # Calcula el idf para cada termino
+    VOCABULARY.calcIDF()
+    VOCABULARY.avgdl = VOCABULARY.avgdl / len(COLECCTIONS)
+    # Vocab.sortVoc()
+    # Imprime el vocabulario
+    return
 
 
 # Filtrador de Lista de Documentos para que tengan terminacion correcta
 def carpetListFilter(listFiles):
-    
     correctFiles = []
     for elem in listFiles:
 
@@ -138,5 +144,4 @@ def carpetListFilter(listFiles):
     return correctFiles
 
 
-
-directoryRunner()
+#directoryRunner()
