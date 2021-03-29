@@ -66,18 +66,22 @@ def getSimDQ(pConsult):
 
 
 def sortDict(pDict):
-    keys = {key: v for key, v in sorted(pDict.items(), key=lambda item: item[1])}
-    keys = [*keys]
-    keys.reverse()
+    keys = dict(sorted(pDict.items(), key=lambda item: item[1],reverse=True))
+
     return keys
 
 def main():
     directoryRunner()
-    consulta = "Este capítulo describe los archivos especiales.".lower()
+    consulta = "compresión de archivos y manejo de archivos comprimidos.".lower()
     dict = getSimDQ(consulta)
-    print(dict)
+    #print(dict)
     dictSorted = sortDict(dict)
-    print(dictSorted)
+    i = 35
+    for word in dictSorted:
+        if i == 0:
+            return
+        print(word,dictSorted[word])
+        i -= 1
 
 main()
 

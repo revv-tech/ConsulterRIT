@@ -104,7 +104,7 @@ def directoryRunner():
     # Ciclo que crea listas con los nombres de los documentos que si son aceptados para el proceso
     while i > 0:
         # Saca el nombre de cada subcarpeta de Man.es
-        nameCarpet = "man4"
+        nameCarpet = "man1"
         # Saca la lista de Archivos de Man.es
         contentCarpet = os.listdir(path + "/" + nameCarpet)
         # Lista con los documentos que deben ser aceptados por la terminacion correcta
@@ -115,7 +115,7 @@ def directoryRunner():
         newColeccion.documentCreator()
         # Actualizar cantidad de Documentos
         N = N + newColeccion.cantDoc
-        newColeccion.printColeccion()
+        #newColeccion.printColeccion()
         # Agrega termino al vocabulario
         VOCABULARY.addTerms(newColeccion.vocabulario)
         # Agregar a COLECCTIONS

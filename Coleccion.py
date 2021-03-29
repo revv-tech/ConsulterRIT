@@ -58,6 +58,7 @@ class Coleccion:
                 # Nuevo Doc
                 newDoc = Documents(idDoc, pathDoc, doc)
                 newDoc.docCalcs(listaDoc)
+                print(doc)
                 # Agrega terminos a vocabulario de coleccion
                 self.termAdder(newDoc.pares)
                 # Agregar doc
