@@ -11,6 +11,7 @@ class Termino:
         # Valor de idf en BM-25
         self.idf = 0
 
+
     def calcIDF(self,N):
 
         idf = math.log((((N - self.ni - 0.5)) / ((self.ni - 0.5))), 2)
@@ -18,6 +19,8 @@ class Termino:
             self.idf = 0
         else:
             self.idf = idf
+        #Transforma Objeto a Json
+
     def addNi(self):
         self.ni = self.ni + 1
 

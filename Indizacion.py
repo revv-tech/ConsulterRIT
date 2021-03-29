@@ -1,6 +1,7 @@
 import os
 import csv
 import re
+
 from Coleccion import Coleccion
 from Vocabulario import Vocabulario
 
@@ -104,7 +105,7 @@ def directoryRunner():
     # Ciclo que crea listas con los nombres de los documentos que si son aceptados para el proceso
     while i > 0:
         # Saca el nombre de cada subcarpeta de Man.es
-        nameCarpet = "man1"
+        nameCarpet = "man4"
         # Saca la lista de Archivos de Man.es
         contentCarpet = os.listdir(path + "/" + nameCarpet)
         # Lista con los documentos que deben ser aceptados por la terminacion correcta
@@ -113,6 +114,8 @@ def directoryRunner():
         newColeccion = Coleccion(nameCarpet, path + "/" + nameCarpet, filesCarpet)
         # Crea lista de Documentos
         newColeccion.documentCreator()
+        newColeccion.toJson()
+        print(newColeccion.jsonFile)
         # Actualizar cantidad de Documentos
         N = N + newColeccion.cantDoc
         #newColeccion.printColeccion()

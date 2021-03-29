@@ -22,6 +22,8 @@ class Documents:
         self.pares = []
         #Diccionario Palabras
         self.dic = {}
+        # Json
+        self.jsonFile = {}
         
     def printDoc(self):
         print("Nombre de Documento: ",self.name)
@@ -62,5 +64,15 @@ class Documents:
             par = [elem,dic[elem]]
             pares.append(par)
         self.pares = pares
-           
+
+    def toJson(self):
+        self.jsonFile[self.name] = []
+        self.jsonFile[self.name].append({
+            "DocID" : self.docID,
+            "Path"  : self.path,
+            "CanTerm" : self.cantTerms,
+            "Longitud" : self.longitud,
+            "Pares" : self.pares
+        })
+        return
     

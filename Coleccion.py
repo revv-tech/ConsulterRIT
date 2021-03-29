@@ -27,6 +27,8 @@ class Coleccion:
         self.listaDocsData = []
         # Lista con el vocabulario de la coleccion
         self.vocabulario = []
+        # Json
+        self.jsonFile = {}
 
     # Filtrador de Terminos
     def filterTerms(self, listaDoc):
@@ -182,3 +184,21 @@ class Coleccion:
             self.splitDots(pListWords, pListWords[cont])
             cont += 1
         return
+    def toJson(self):
+        self.jsonFile[self.name] = []
+        self.jsonFile[self.name].append({
+            "Path": self.path,
+            "CanDocs": self.cantDoc,
+            "LongitudAvg": self.longitudAvg,
+            "Nombres Documentos": self.listaDocsName,
+        })
+        self.jsonFile[self.name].append(self.docsToJson())
+
+        return
+    def docsToJson(self):
+        docs = {}
+        docs["Documentos"] = []
+        for doc in self.listaDocsData:
+            doc.toJson()
+            docs["Documentos"].append(doc.jsonFile)
+        return docs
