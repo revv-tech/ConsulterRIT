@@ -25,14 +25,26 @@ def cleanTerms(pTerms):
 
 
 def getIDF(pTerm):
-    return VOCABULARY.terms[pTerm].idf
+    """try:
+        index = VOCABULARY.terms.index(pTerm)
+        return VOCABULARY.terms[index].idf
+    except(ValueError):
+        return 0"""
+    terms = VOCABULARY.terms
+    i = 0
+    while i < len(VOCABULARY.terms):
+        if pTerm == terms[i].term:
+            return VOCABULARY.terms[i].idf
+        i += 1
+    return 0
+
 
 
 def getFreqFunct(pTerm, pNumDoc, pNumColecction):
     if pTerm in COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].dic:
         freq = COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].dic[pTerm]
         denominador = freq * (k + 1)
-        divisor = freq + k * (1 - b + b * (COLECCTIONS[pNumColecction].cantTerms / VOCABULARY.avgdl))
+        divisor = freq + k * (1 - b + b * (COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].cantTerms / VOCABULARY.avgdl))
         return denominador / divisor
     return 0
 
@@ -47,7 +59,7 @@ def getSimDQ(pConsult):
         while documentNUM < len(listDocs):
             simDQ[listDocs[documentNUM].name] = 0
             for term in terms:
-                simDQ[listDocs[documentNUM].name] += getSimDQ(term) * getFreqFunct(term, documentNUM, colectionNUM)
+                simDQ[listDocs[documentNUM].name] += getIDF(term) * getFreqFunct(term, documentNUM, colectionNUM)
             documentNUM += 1
         colectionNUM += 1
     return simDQ
@@ -56,12 +68,14 @@ def getSimDQ(pConsult):
 def sortDict(pDict):
     keys = {key: v for key, v in sorted(pDict.items(), key=lambda item: item[1])}
     keys = [*keys]
-    return keys.reverse()
+    keys.reverse()
+    return keys
 
 def main():
     directoryRunner()
-    consulta = "compresión de archivos y manejo de archivos comprimidos"
+    consulta = "Este capítulo describe los archivos especiales.".lower()
     dict = getSimDQ(consulta)
+    print(dict)
     dictSorted = sortDict(dict)
     print(dictSorted)
 
