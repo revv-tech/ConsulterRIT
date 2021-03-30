@@ -114,8 +114,8 @@ def directoryRunner():
         newColeccion = Coleccion(nameCarpet, path + "/" + nameCarpet, filesCarpet)
         # Crea lista de Documentos
         newColeccion.documentCreator()
+        # Lo convierte en Json
         newColeccion.toJson()
-        print(newColeccion.jsonFile)
         # Actualizar cantidad de Documentos
         N = N + newColeccion.cantDoc
         #newColeccion.printColeccion()
@@ -132,6 +132,8 @@ def directoryRunner():
     VOCABULARY.calcIDF()
     VOCABULARY.avgdl = VOCABULARY.avgdl / len(COLECCTIONS)
     # Vocab.sortVoc()
+    #Convierte vocabulario a Json
+    VOCABULARY.toJsonFile()
     # Imprime el vocabulario
     return
 

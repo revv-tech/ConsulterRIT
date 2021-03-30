@@ -60,19 +60,22 @@ class Documents:
         pares = []
 
         for elem in alphList:
+
             self.longitud = self.longitud + dic[elem]
             par = [elem,dic[elem]]
             pares.append(par)
+
         self.pares = pares
+        self.dic = {pares[i][0]: pares[i][1] for i in range(0, len(pares), 2)}
 
     def toJson(self):
-        self.jsonFile[self.name] = []
-        self.jsonFile[self.name].append({
+        self.jsonFile = {
             "DocID" : self.docID,
             "Path"  : self.path,
+            "Descripcion" : self.descrip,
             "CanTerm" : self.cantTerms,
             "Longitud" : self.longitud,
-            "Pares" : self.pares
-        })
+            "Pares" : self.dic
+        }
         return
     

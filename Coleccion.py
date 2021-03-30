@@ -190,15 +190,14 @@ class Coleccion:
             "Path": self.path,
             "CanDocs": self.cantDoc,
             "LongitudAvg": self.longitudAvg,
-            "Nombres Documentos": self.listaDocsName,
+            "Documentos" : self.docsToJson()
         })
-        self.jsonFile[self.name].append(self.docsToJson())
+
 
         return
     def docsToJson(self):
-        docs = {}
-        docs["Documentos"] = []
+        docs  = {}
         for doc in self.listaDocsData:
             doc.toJson()
-            docs["Documentos"].append(doc.jsonFile)
+            docs[doc.name] = doc.jsonFile
         return docs

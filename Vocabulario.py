@@ -7,6 +7,7 @@ class Vocabulario:
         self.N = 0
         self.terms = []
         self.avgdl = 0
+        self.jsonFile = {}
     
     def calcIDF(self):
         for term in self.terms:
@@ -33,9 +34,10 @@ class Vocabulario:
 
                     self.terms.append(elem)
 
-    #Ordena Vocabulario Alfabeticamente
+    # Ordena Vocabulario Alfabeticamente
     def sortVoc(self):
         self.terms = sorted(self.terms, key=lambda x: x.term, reverse=True)
+
 
     def print(self):
         print("Vocabulario")
@@ -44,3 +46,19 @@ class Vocabulario:
         for term in self.terms:
             if term.term > 1:
                 term.print()
+
+
+    def toJsonFile(self):
+        self.jsonFile["Vocabulario"] = {
+            "N" : self.N,
+            "Promedio de Longitud" : self.avgdl,
+            "Terminos" : self.termsToJson()
+        }
+        return
+
+    def termsToJson(self):
+        dic = {}
+        for term in self.terms:
+            term.toJsonFile()
+            dic[term.term] = term.jsonFile
+        return dic
