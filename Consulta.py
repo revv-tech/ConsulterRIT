@@ -9,6 +9,7 @@ from Vocabulario import Vocabulario
 from Terminos import Termino
 
 from Indizacion import directoryRunner
+
 k = 1.2
 b = 0.75
 
@@ -42,12 +43,12 @@ def getIDF(pTerm):
     return 0
 
 
-
 def getFreqFunct(pTerm, pNumDoc, pNumColecction):
     if pTerm in COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].dic:
         freq = COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].dic[pTerm]
         denominador = freq * (k + 1)
-        divisor = freq + k * (1 - b + b * (COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].cantTerms / VOCABULARY.avgdl))
+        divisor = freq + k * (
+                    1 - b + b * (COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].cantTerms / VOCABULARY.avgdl))
         return denominador / divisor
     return 0
 
@@ -69,9 +70,10 @@ def getSimDQ(pConsult):
 
 
 def sortDict(pDict):
-    keys = dict(sorted(pDict.items(), key=lambda item: item[1],reverse=True))
+    keys = dict(sorted(pDict.items(), key=lambda item: item[1], reverse=True))
 
     return keys
+
 
 def main():
     directoryRunner()
@@ -83,9 +85,8 @@ def main():
         json.dump(prueba, file)
     with open("prueba.json", 'r') as file:
         parsed = json.load(file)
-    print(json.dumps(parsed,indent=4,sort_keys=False))
-    #print(dict)
-
+    print(json.dumps(parsed, indent=4, sort_keys=False))
+    # print(dict)
 
     """
     i = 35
@@ -95,8 +96,6 @@ def main():
         print(word,dictSorted[word])
         i -= 1
     """
+
+
 main()
-
-
-
-
