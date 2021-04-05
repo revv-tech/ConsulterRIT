@@ -2,11 +2,11 @@
 
 class Vocabulario:
 
-    def __init__(self):
+    def __init__(self, N = 0, terms = [], avgdl = 0):
 
-        self.N = 0
-        self.terms = []
-        self.avgdl = 0
+        self.N = N
+        self.terms = terms
+        self.avgdl = avgdl
         self.jsonFile = {}
     
     def calcIDF(self):
@@ -44,8 +44,7 @@ class Vocabulario:
         print("Cantidad Documentos: ", self.N)
         print("Vocabulario General: ")
         for term in self.terms:
-            if term.term > 1:
-                term.print()
+            term.print()
 
 
     def toJsonFile(self):

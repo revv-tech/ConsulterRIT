@@ -2,24 +2,22 @@
 
 class Documents:
 
-    def __init__(self,docID,path,nameDoc):
+    def __init__(self,docID,path,nameDoc, descrip = [], pares = [], cantTerms = 0, longitud = 0):
 
         #Nombre del Doc
         self.name = nameDoc
-        #Lista de Terminos del Documento
-        #self.listDoc = listDoc
         #Numero consecutivo unico generado aleatoriamente
         self.docID = docID
         #Ruta del Documento
         self.path = path
         #Descripcion
-        self.descrip = []
+        self.descrip = descrip
         #Numero de terminos distintos del documento
-        self.cantTerms = 0
+        self.cantTerms = cantTerms
         #Longitud del Documento (Suma de las frecuencias de todos los terminos del documento
-        self.longitud = 0
+        self.longitud = longitud
         #Lista de Vectores (Orden Alfabetico)
-        self.pares = []
+        self.pares = pares
         #Diccionario Palabras
         self.dic = {}
         # Json
@@ -78,4 +76,4 @@ class Documents:
             "Pares" : self.dic
         }
         return
-    
+

@@ -3,7 +3,7 @@ import json
 from Coleccion import stopwords
 from Indizacion import VOCABULARY
 from Indizacion import COLECCTIONS
-from Reader import Reader
+
 import _json
 from Coleccion import Coleccion
 from Vocabulario import Vocabulario
@@ -75,16 +75,51 @@ def sortDict(pDict):
 
     return keys
 # Creador de archivos
+def jsonReader():
+    with open("../ConsulterRIT/Indizacion/documentos.json") as file:
+        dicDocs = json.load(file)
+    with open("../ConsulterRIT/Indizacion/colecciones.json") as file:
+        dicColec = json.load(file)
+    with open("../ConsulterRIT/Indizacion/vocabulario.json") as file:
+        dicVoc = json.load(file)
 
+    jsonToObjects(dicDocs, dicColec, dicVoc)
+    return
+
+def jsonToObjects(dicDocs,dicColec,dicVoc):
+    global COLECCTIONS
+    global VOCABULARY
+
+    COLECCTIONS = []
+    terms = []
+
+    for colec in dicColec:
+
+        newColeccion = Coleccion(colec, dicColec[colec]["Path"], dicColec[colec]["Nombres Docs"],dicColec[colec]["LongitudAvg"],dicColec[colec]["CanDocs"])
+        newColeccion.documentLoader(dicDocs)
+        COLECCTIONS.append(newColeccion)
+
+    for term in dicVoc["Vocabulario"]["Terminos"]:
+        newTerm = Termino(term,dicVoc["Vocabulario"]["Terminos"][term]["ni"], dicVoc["Vocabulario"]["Terminos"][term]["idf"])
+        terms.append(newTerm)
+
+    VOCABULARY = Vocabulario(dicVoc["Vocabulario"]["N"],terms,dicVoc["Vocabulario"]["Promedio de Longitud"])
+
+
+
+
+    return
 
 def main():
+
     directoryRunner()
     consulta = "compresión de archivos y manejo de archivos comprimidos.".lower()
-    dict = sortDict(getSimDQ(consulta))
+    dic = sortDict(getSimDQ(consulta))
 
-    # print(dict)
+
 
 
 
 
 main()
+#jsonReader()

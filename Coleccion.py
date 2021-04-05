@@ -11,16 +11,16 @@ stopwords = ["a", "ante", "bajo", "cabe", "con", "contra", "de", "desde", "e", "
         
 class Coleccion:
 
-    def __init__(self, name, path, lista):
+    def __init__(self, name, path, lista, longitudAvg = 0, cantDocs = 0 ):
 
         # Nombre del Directorio
         self.name = name
         # Ruta completa del Directorio
         self.path = path
         # Numero de documentos
-        self.cantDoc = 0
+        self.cantDoc = cantDocs
         # Longitud Promedio de Documentos
-        self.longitudAvg = 0
+        self.longitudAvg = longitudAvg
         # Lista de los documentos nombres
         self.listaDocsName = lista
         # Lista Documentos en Objetos
@@ -60,7 +60,6 @@ class Coleccion:
                 # Nuevo Doc
                 newDoc = Documents(idDoc, pathDoc, doc)
                 newDoc.docCalcs(listaDoc)
-                print(doc)
                 # Agrega terminos a vocabulario de coleccion
                 self.termAdder(newDoc.pares)
                 # Agregar doc
@@ -74,6 +73,12 @@ class Coleccion:
             
             return
 
+    def documentLoader(self,dicDocs):
+        for doc in dicDocs:
+            if doc in self.listaDocsName:
+                newDoc = Documents(dicDocs[doc]["DocID"],dicDocs[doc]["Path"],doc, dicDocs[doc]["Descripcion"], dicDocs[doc]["Pares"], dicDocs[doc]["Cantidad Terminos"], dicDocs[doc]["Longitud"])
+                self.listaDocsData.append(newDoc)
+        return
     # Funcion que agrega los terminos de cada documento
     def termAdder(self, listaPares):
 
@@ -102,9 +107,17 @@ class Coleccion:
                 segmentoAux = row[0].split(" ")
                 segmentoCompleto = segmentoAux + self.eliminaComas(row[1:])
                 lista += segmentoCompleto
-
+        #lista = self.cutDoc(lista)
         return lista
 
+    def cutDoc(self,lista):
+        newDocList = []
+
+        for i in range(0,len(lista)):
+            if lista[i] == "DESCRIPCION":
+                newDocList = newDocList[i:]
+
+        return newDocList
     def eliminaComas(self, segmento):
 
         newList = []
@@ -131,8 +144,7 @@ class Coleccion:
         print("Cantidad Promedio Long.: ", self.longitudAvg)
         print("Lista de los documentos: ", self.listaDocsName)
         print("")
-        print("Vocabulario de la Coleccion: ")
-        print(self.vocabulario)
+
         return
 
     def joinWords(self, listWords, cont):
@@ -184,17 +196,17 @@ class Coleccion:
             self.splitDots(pListWords, pListWords[cont])
             cont += 1
         return
+
     def toJson(self):
         self.docsToJson()
-        self.jsonFile[self.name] = []
-        self.jsonFile[self.name].append({
+        self.jsonFile = {
             "Path": self.path,
             "CanDocs": self.cantDoc,
-            "LongitudAvg": self.longitudAvg
-        })
-
-
+            "LongitudAvg": self.longitudAvg,
+            "Nombres Docs": self.listaDocsName
+        }
         return
+
     def docsToJson(self):
         docs  = {}
         for doc in self.listaDocsData:

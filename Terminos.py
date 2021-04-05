@@ -2,14 +2,14 @@ import math
 
 class Termino:
 
-    def __init__(self,term,ni):
+    def __init__(self,term,ni, idf = 0):
 
         # Char del termino
         self.term = term
         # Cantidad de documentos en los que aparece
         self.ni = ni
         # Valor de idf en BM-25
-        self.idf = 0
+        self.idf = idf
         # Json file
         self.jsonFile = {}
 

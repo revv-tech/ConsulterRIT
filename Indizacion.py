@@ -140,11 +140,12 @@ def directoryRunner():
 
 # Crea los json
 def fileCreator():
+
     vocabulario = VOCABULARY.jsonFile
     documentos = {}
     colecciones = {}
     for coleccion in COLECCTIONS:
-        colecciones[coleccion.name] = coleccion.docsToJson()
+        colecciones[coleccion.name] = coleccion.jsonFile
         documentos.update(coleccion.docsToJson())
 
     with open("../ConsulterRIT/Indizacion/documentos.json", 'w') as file:
