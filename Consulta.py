@@ -3,6 +3,7 @@ import json
 from Coleccion import stopwords
 from Indizacion import VOCABULARY
 from Indizacion import COLECCTIONS
+from Reader import Reader
 import _json
 from Coleccion import Coleccion
 from Vocabulario import Vocabulario
@@ -73,29 +74,17 @@ def sortDict(pDict):
     keys = dict(sorted(pDict.items(), key=lambda item: item[1], reverse=True))
 
     return keys
+# Creador de archivos
 
 
 def main():
     directoryRunner()
     consulta = "compresión de archivos y manejo de archivos comprimidos.".lower()
-    dict = getSimDQ(consulta)
-    dictSorted = sortDict(dict)
-    prueba = VOCABULARY.jsonFile
-    with open("prueba.json", 'w') as file:
-        json.dump(prueba, file)
-    with open("prueba.json", 'r') as file:
-        parsed = json.load(file)
-    print(json.dumps(parsed, indent=4, sort_keys=False))
+    dict = sortDict(getSimDQ(consulta))
+
     # print(dict)
 
-    """
-    i = 35
-    for word in dictSorted:
-        if i == 0:
-            return
-        print(word,dictSorted[word])
-        i -= 1
-    """
+
 
 
 main()

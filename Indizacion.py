@@ -1,7 +1,7 @@
 import os
 import csv
 import re
-
+import json
 from Coleccion import Coleccion
 from Vocabulario import Vocabulario
 
@@ -134,9 +134,25 @@ def directoryRunner():
     # Vocab.sortVoc()
     #Convierte vocabulario a Json
     VOCABULARY.toJsonFile()
-    # Imprime el vocabulario
+    #Crea Archivos
+    fileCreator()
     return
 
+
+def fileCreator():
+    vocabulario = VOCABULARY.jsonFile
+    documentos = {}
+    colecciones = {}
+    for coleccion in COLECCTIONS:
+        colecciones[coleccion.name] = coleccion.docsToJson()
+        documentos.update(coleccion.docsToJson())
+
+    with open("documentos.json", 'w') as file:
+        json.dump(documentos, file, indent=4, sort_keys=False)
+    with open("colecciones.json", 'w') as file:
+        json.dump(colecciones, file, indent=4, sort_keys=False)
+    with open("vocabulario.json", 'w') as file:
+        json.dump(vocabulario, file, indent=4, sort_keys=False)
 
 # Filtrador de Lista de Documentos para que tengan terminacion correcta
 def carpetListFilter(listFiles):

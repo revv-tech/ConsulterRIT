@@ -72,9 +72,9 @@ class Documents:
         self.jsonFile = {
             "DocID" : self.docID,
             "Path"  : self.path,
+            "Cantidad Terminos": self.cantTerms,
+            "Longitud": self.longitud,
             "Descripcion" : self.descrip,
-            "CanTerm" : self.cantTerms,
-            "Longitud" : self.longitud,
             "Pares" : self.dic
         }
         return
