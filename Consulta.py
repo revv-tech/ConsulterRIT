@@ -1,15 +1,15 @@
 import json
 
-from Coleccion import stopwords
-from Indizacion import VOCABULARY
-from Indizacion import COLECCTIONS
-
-import _json
 from Coleccion import Coleccion
-from Vocabulario import Vocabulario
-from Terminos import Termino
-
+from Coleccion import stopwords
+from Indizacion import COLECCTIONS
+from Indizacion import VOCABULARY
 from Indizacion import directoryRunner
+from Terminos import Termino
+from Vocabulario import Vocabulario
+
+#COLECCTIONS = COLECCTIONS
+#VOCABULARY = VOCABULARY
 
 k = 1.2
 b = 0.75
@@ -30,11 +30,6 @@ def cleanTerms(pTerms):
 
 
 def getIDF(pTerm):
-    """try:
-        index = VOCABULARY.terms.index(pTerm)
-        return VOCABULARY.terms[index].idf
-    except(ValueError):
-        return 0"""
     terms = VOCABULARY.terms
     i = 0
     while i < len(VOCABULARY.terms):
@@ -49,7 +44,7 @@ def getFreqFunct(pTerm, pNumDoc, pNumColecction):
         freq = COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].dic[pTerm]
         denominador = freq * (k + 1)
         divisor = freq + k * (
-                    1 - b + b * (COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].cantTerms / VOCABULARY.avgdl))
+                1 - b + b * (COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].cantTerms / VOCABULARY.avgdl))
         return denominador / divisor
     return 0
 
@@ -72,8 +67,70 @@ def getSimDQ(pConsult):
 
 def sortDict(pDict):
     keys = dict(sorted(pDict.items(), key=lambda item: item[1], reverse=True))
-
     return keys
+
+
+# Creador de archivos
+
+def createHTML(pDict, pCant, pName, pConsult):
+    newHTML = open("../ConsulterRIT/consultas/" + pName + ".html", 'w')
+    msg = "<html>" \
+          "<head>" \
+          "<title>Consulta: " + pConsult + "</title>" \
+                                           "</head>" \
+                                           "<body>"
+    i = 1
+    for key in pDict:
+        if i <= pCant:
+            doc = searchDoc(key)
+            docInfo = "<h3>#" + str(i) + "     " + str(pDict[key]) + "     " + doc.path + "</h3>"
+            docInfo += "<h4>Descripcion:</h4>" \
+                       "<p>"
+            for word in doc.descrip:
+                docInfo += word + " "
+            docInfo += "</p>"
+            msg += docInfo
+        else:
+            break
+        i += 1
+    msg += "</body>" \
+           "</html>"
+    newHTML.write(msg)
+    newHTML.close()
+    return
+
+
+def searchDoc(pName):
+    for colection in COLECCTIONS:
+        for document in colection.listaDocsData:
+            if document.name == pName:
+                return document
+    return -1
+
+
+def createTXT(pDict, pName, pConsult):
+    newTXT = open("../ConsulterRIT/consultas/" + pName + ".esc.txt", 'w')
+    msg = "Cosnulta: " + pConsult + "\n" \
+                                    "Escalafon: \n"
+    i = 1
+    for key in pDict:
+        if pDict[key] > 0:
+            doc = searchDoc(key)
+            msg += "#" + str(i) + "\t" + str(doc.docID) + "\t" + str(pDict[key]) + "\n"
+        else:
+            break
+        i += 1
+    newTXT.write(msg)
+    newTXT.close()
+    return
+
+
+def createConsultas(pDict, pCant, pName="consulta", pConsult=''):
+    createHTML(pDict, pCant, pName, pConsult)
+    createTXT(pDict, pName, pConsult)
+    return
+
+
 # Creador de archivos
 def jsonReader():
     with open("../ConsulterRIT/Indizacion/documentos.json") as file:
@@ -86,7 +143,8 @@ def jsonReader():
     jsonToObjects(dicDocs, dicColec, dicVoc)
     return
 
-def jsonToObjects(dicDocs,dicColec,dicVoc):
+
+def jsonToObjects(dicDocs, dicColec, dicVoc):
     global COLECCTIONS
     global VOCABULARY
 
@@ -94,32 +152,29 @@ def jsonToObjects(dicDocs,dicColec,dicVoc):
     terms = []
 
     for colec in dicColec:
-
-        newColeccion = Coleccion(colec, dicColec[colec]["Path"], dicColec[colec]["Nombres Docs"],dicColec[colec]["LongitudAvg"],dicColec[colec]["CanDocs"])
+        newColeccion = Coleccion(colec, dicColec[colec]["Path"], dicColec[colec]["Nombres Docs"],
+                                 dicColec[colec]["LongitudAvg"], dicColec[colec]["CanDocs"])
         newColeccion.documentLoader(dicDocs)
         COLECCTIONS.append(newColeccion)
 
     for term in dicVoc["Vocabulario"]["Terminos"]:
-        newTerm = Termino(term,dicVoc["Vocabulario"]["Terminos"][term]["ni"], dicVoc["Vocabulario"]["Terminos"][term]["idf"])
+        newTerm = Termino(term, dicVoc["Vocabulario"]["Terminos"][term]["ni"],
+                          dicVoc["Vocabulario"]["Terminos"][term]["idf"])
         terms.append(newTerm)
 
-    VOCABULARY = Vocabulario(dicVoc["Vocabulario"]["N"],terms,dicVoc["Vocabulario"]["Promedio de Longitud"])
-
-
-
+    VOCABULARY = Vocabulario(dicVoc["Vocabulario"]["N"], terms, dicVoc["Vocabulario"]["Promedio de Longitud"])
 
     return
 
-def main():
 
+def main():
     directoryRunner()
     consulta = "compresión de archivos y manejo de archivos comprimidos.".lower()
-    dic = sortDict(getSimDQ(consulta))
+    dict = sortDict(getSimDQ(consulta))
+    print(dict)
+    createConsultas(dict, 2, "prueba", consulta)
 
-
-
-
+    # print(dict)
 
 
 main()
-#jsonReader()
