@@ -6,4 +6,4 @@ class Reader:
         self.documentos = documentos,
         self.colecciones = colecciones
 
-    
+

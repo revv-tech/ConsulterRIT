@@ -138,7 +138,7 @@ def directoryRunner():
     fileCreator()
     return
 
-
+# Crea los json
 def fileCreator():
     vocabulario = VOCABULARY.jsonFile
     documentos = {}
@@ -147,11 +147,11 @@ def fileCreator():
         colecciones[coleccion.name] = coleccion.docsToJson()
         documentos.update(coleccion.docsToJson())
 
-    with open("documentos.json", 'w') as file:
+    with open("../ConsulterRIT/Indizacion/documentos.json", 'w') as file:
         json.dump(documentos, file, indent=4, sort_keys=False)
-    with open("colecciones.json", 'w') as file:
+    with open("../ConsulterRIT/Indizacion/colecciones.json", 'w') as file:
         json.dump(colecciones, file, indent=4, sort_keys=False)
-    with open("vocabulario.json", 'w') as file:
+    with open("../ConsulterRIT/Indizacion/vocabulario.json", 'w') as file:
         json.dump(vocabulario, file, indent=4, sort_keys=False)
 
 # Filtrador de Lista de Documentos para que tengan terminacion correcta
