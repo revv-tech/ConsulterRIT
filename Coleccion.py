@@ -53,10 +53,15 @@ class Coleccion:
             return []
         else:
             idDoc = 0
+
             for doc in self.listaDocsName:
                 pathDoc = self.path + "/" + doc
                 # Lista filtrada con los terminos de doc
                 listaDoc = self.filterTerms(self.leerDoc(pathDoc))
+
+                # Cortar
+                listaDoc = self.cutDescrip(listaDoc)
+
                 # Nuevo Doc
                 newDoc = Documents(idDoc, pathDoc, doc)
                 newDoc.docCalcs(listaDoc)
@@ -67,11 +72,23 @@ class Coleccion:
                 # newDoc.printDoc()
                 idDoc = idDoc + 1
 
+
             self.cantDoc = idDoc
             
             self.calcProm()
             
             return
+    def cutDescrip(self,lista):
+        #print(lista)
+
+        while True:
+            if lista[0] == "description" or lista[0] == "descripción":
+
+                lista = lista[1:]
+
+                break
+            lista = lista[1:]
+        return lista
 
     def documentLoader(self,dicDocs):
         for doc in dicDocs:

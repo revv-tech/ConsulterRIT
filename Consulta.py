@@ -86,6 +86,7 @@ def createHTML(pDict, pCant, pName, pConsult):
             docInfo = "<h3>#" + str(i) + "     " + str(pDict[key]) + "     " + doc.path + "</h3>"
             docInfo += "<h4>Descripcion:</h4>" \
                        "<p>"
+
             for word in doc.descrip:
                 docInfo += word + " "
             docInfo += "</p>"

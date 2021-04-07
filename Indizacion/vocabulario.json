@@ -1,7 +1,7 @@
 {
     "Vocabulario": {
         "N": 31,
-        "Promedio de Longitud": 859.9677419354839,
+        "Promedio de Longitud": 833.741935483871,
         "Terminos": {
             "#define": {
                 "Termino": "#define",
@@ -35,8 +35,8 @@
             },
             "0.": {
                 "Termino": "0.",
-                "ni": 6,
-                "idf": 1.9142701259741162
+                "ni": 5,
+                "idf": 2.2129937233341983
             },
             "0622": {
                 "Termino": "0622",
@@ -80,8 +80,8 @@
             },
             "8": {
                 "Termino": "8",
-                "ni": 12,
-                "idf": 0.5655971758542251
+                "ni": 11,
+                "idf": 0.7618402628052355
             },
             "<=": {
                 "Termino": "<=",
@@ -258,11 +258,6 @@
                 "ni": 3,
                 "idf": 2.9740047914670558
             },
-            "console": {
-                "Termino": "console",
-                "ni": 3,
-                "idf": 2.9740047914670558
-            },
             "console(4)": {
                 "Termino": "console(4)",
                 "ni": 6,
@@ -275,8 +270,8 @@
             },
             "con\u00adsola": {
                 "Termino": "con\u00adsola",
-                "ni": 2,
-                "idf": 3.5109619192773796
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "crean": {
                 "Termino": "crean",
@@ -305,7 +300,7 @@
             },
             "del": {
                 "Termino": "del",
-                "ni": 24,
+                "ni": 21,
                 "idf": 0
             },
             "denominadas": {
@@ -318,15 +313,10 @@
                 "ni": 4,
                 "idf": 2.557995453120887
             },
-            "descripci\u00f3n": {
-                "Termino": "descripci\u00f3n",
-                "ni": 24,
-                "idf": 0
-            },
             "designa": {
                 "Termino": "designa",
-                "ni": 5,
-                "idf": 2.2129937233341983
+                "ni": 4,
+                "idf": 2.557995453120887
             },
             "disalloc": {
                 "Termino": "disalloc",
@@ -355,13 +345,13 @@
             },
             "donde": {
                 "Termino": "donde",
-                "ni": 7,
-                "idf": 1.647698256069119
+                "ni": 6,
+                "idf": 1.9142701259741162
             },
             "dos": {
                 "Termino": "dos",
-                "ni": 11,
-                "idf": 0.7618402628052355
+                "ni": 10,
+                "idf": 0.9652345818393234
             },
             "doshell(8)": {
                 "Termino": "doshell(8)",
@@ -440,8 +430,8 @@
             },
             "habituales": {
                 "Termino": "habituales",
-                "ni": 3,
-                "idf": 2.9740047914670558
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "habitualmente": {
                 "Termino": "habitualmente",
@@ -538,11 +528,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "manual": {
-                "Termino": "manual",
-                "ni": 26,
-                "idf": 0
-            },
             "mapscrn(8)": {
                 "Termino": "mapscrn(8)",
                 "ni": 3,
@@ -555,8 +540,8 @@
             },
             "mayor": {
                 "Termino": "mayor",
-                "ni": 11,
-                "idf": 0.7618402628052355
+                "ni": 9,
+                "idf": 1.1783372412585125
             },
             "memoria": {
                 "Termino": "memoria",
@@ -570,8 +555,8 @@
             },
             "menor": {
                 "Termino": "menor",
-                "ni": 11,
-                "idf": 0.7618402628052355
+                "ni": 9,
+                "idf": 1.1783372412585125
             },
             "mknod(1)": {
                 "Termino": "mknod(1)",
@@ -580,13 +565,13 @@
             },
             "modo": {
                 "Termino": "modo",
-                "ni": 11,
-                "idf": 0.7618402628052355
+                "ni": 10,
+                "idf": 0.9652345818393234
             },
             "momento": {
                 "Termino": "momento",
-                "ni": 5,
-                "idf": 2.2129937233341983
+                "ni": 4,
+                "idf": 2.557995453120887
             },
             "mont\u00f3n": {
                 "Termino": "mont\u00f3n",
@@ -628,14 +613,9 @@
                 "ni": 26,
                 "idf": 0
             },
-            "nombre": {
-                "Termino": "nombre",
-                "ni": 24,
-                "idf": 0
-            },
             "normalmente": {
                 "Termino": "normalmente",
-                "ni": 17,
+                "ni": 16,
                 "idf": 0
             },
             "nr_consoles": {
@@ -650,8 +630,8 @@
             },
             "n\u00famero": {
                 "Termino": "n\u00famero",
-                "ni": 14,
-                "idf": 0.18641312423088138
+                "ni": 13,
+                "idf": 0.3743955147814979
             },
             "omisi\u00f3n).": {
                 "Termino": "omisi\u00f3n).",
@@ -695,8 +675,8 @@
             },
             "primera": {
                 "Termino": "primera",
-                "ni": 6,
-                "idf": 1.9142701259741162
+                "ni": 5,
+                "idf": 2.2129937233341983
             },
             "proceso": {
                 "Termino": "proceso",
@@ -707,11 +687,6 @@
                 "Termino": "programa",
                 "ni": 6,
                 "idf": 1.9142701259741162
-            },
-            "programador": {
-                "Termino": "programador",
-                "ni": 20,
-                "idf": 0
             },
             "propiedades": {
                 "Termino": "propiedades",
@@ -795,13 +770,13 @@
             },
             "sistema": {
                 "Termino": "sistema",
-                "ni": 13,
-                "idf": 0.3743955147814979
+                "ni": 10,
+                "idf": 0.9652345818393234
             },
             "son": {
                 "Termino": "son",
-                "ni": 15,
-                "idf": 0.0
+                "ni": 14,
+                "idf": 0.18641312423088138
             },
             "su": {
                 "Termino": "su",
@@ -810,8 +785,8 @@
             },
             "s\u00f3lo": {
                 "Termino": "s\u00f3lo",
-                "ni": 11,
-                "idf": 0.7618402628052355
+                "ni": 10,
+                "idf": 0.9652345818393234
             },
             "tambi\u00e9n": {
                 "Termino": "tambi\u00e9n",
@@ -838,20 +813,15 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "terminal": {
-                "Termino": "terminal",
-                "ni": 8,
-                "idf": 1.4043902550793355
-            },
             "terminales": {
                 "Termino": "terminales",
-                "ni": 5,
-                "idf": 2.2129937233341983
+                "ni": 4,
+                "idf": 2.557995453120887
             },
             "tiene": {
                 "Termino": "tiene",
-                "ni": 12,
-                "idf": 0.5655971758542251
+                "ni": 11,
+                "idf": 0.7618402628052355
             },
             "trav\u00e9s": {
                 "Termino": "trav\u00e9s",
@@ -915,13 +885,8 @@
             },
             "virtuales": {
                 "Termino": "virtuales",
-                "ni": 4,
-                "idf": 2.557995453120887
-            },
-            "virtuales.": {
-                "Termino": "virtuales.",
-                "ni": 1,
-                "idf": 4.2976805486406855
+                "ni": 3,
+                "idf": 2.9740047914670558
             },
             "visualizar\u00e1": {
                 "Termino": "visualizar\u00e1",
@@ -945,8 +910,8 @@
             },
             "x": {
                 "Termino": "x",
-                "ni": 9,
-                "idf": 1.1783372412585125
+                "ni": 8,
+                "idf": 1.4043902550793355
             },
             "#": {
                 "Termino": "#",
@@ -965,13 +930,13 @@
             },
             "*": {
                 "Termino": "*",
-                "ni": 4,
-                "idf": 2.557995453120887
+                "ni": 3,
+                "idf": 2.9740047914670558
             },
             "+": {
                 "Termino": "+",
-                "ni": 7,
-                "idf": 1.647698256069119
+                "ni": 6,
+                "idf": 1.9142701259741162
             },
             "->": {
                 "Termino": "->",
@@ -990,8 +955,8 @@
             },
             "0": {
                 "Termino": "0",
-                "ni": 15,
-                "idf": 0.0
+                "ni": 14,
+                "idf": 0.18641312423088138
             },
             "0-16": {
                 "Termino": "0-16",
@@ -1205,8 +1170,8 @@
             },
             "16": {
                 "Termino": "16",
-                "ni": 7,
-                "idf": 1.647698256069119
+                "ni": 6,
+                "idf": 1.9142701259741162
             },
             "16=control.": {
                 "Termino": "16=control.",
@@ -1440,8 +1405,8 @@
             },
             "6": {
                 "Termino": "6",
-                "ni": 5,
-                "idf": 2.2129937233341983
+                "ni": 4,
+                "idf": 2.557995453120887
             },
             "6429/ansi": {
                 "Termino": "6429/ansi",
@@ -1525,8 +1490,8 @@
             },
             "[": {
                 "Termino": "[",
-                "ni": 6,
-                "idf": 1.9142701259741162
+                "ni": 4,
+                "idf": 2.557995453120887
             },
             "[.": {
                 "Termino": "[.",
@@ -1900,8 +1865,8 @@
             },
             "base": {
                 "Termino": "base",
-                "ni": 8,
-                "idf": 1.4043902550793355
+                "ni": 7,
+                "idf": 1.647698256069119
             },
             "basta;": {
                 "Termino": "basta;",
@@ -2278,11 +2243,6 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
-            "console_codes": {
-                "Termino": "console_codes",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "console_codes(4)": {
                 "Termino": "console_codes(4)",
                 "ni": 1,
@@ -2315,8 +2275,8 @@
             },
             "controlador": {
                 "Termino": "controlador",
-                "ni": 6,
-                "idf": 1.9142701259741162
+                "ni": 5,
+                "idf": 2.2129937233341983
             },
             "controles": {
                 "Termino": "controles",
@@ -2415,8 +2375,8 @@
             },
             "cuando": {
                 "Termino": "cuando",
-                "ni": 9,
-                "idf": 1.1783372412585125
+                "ni": 8,
+                "idf": 1.4043902550793355
             },
             "cuatro": {
                 "Termino": "cuatro",
@@ -2735,8 +2695,8 @@
             },
             "determina": {
                 "Termino": "determina",
-                "ni": 4,
-                "idf": 2.557995453120887
+                "ni": 3,
+                "idf": 2.9740047914670558
             },
             "devolver": {
                 "Termino": "devolver",
@@ -2910,8 +2870,8 @@
             },
             "ejemplo": {
                 "Termino": "ejemplo",
-                "ni": 12,
-                "idf": 0.5655971758542251
+                "ni": 11,
+                "idf": 0.7618402628052355
             },
             "ele.": {
                 "Termino": "ele.",
@@ -2970,13 +2930,13 @@
             },
             "entera": {
                 "Termino": "entera",
-                "ni": 2,
-                "idf": 3.5109619192773796
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "entera.": {
                 "Termino": "entera.",
-                "ni": 3,
-                "idf": 2.9740047914670558
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "entonces": {
                 "Termino": "entonces",
@@ -3050,8 +3010,8 @@
             },
             "especiales": {
                 "Termino": "especiales",
-                "ni": 8,
-                "idf": 1.4043902550793355
+                "ni": 5,
+                "idf": 2.2129937233341983
             },
             "especialmente.": {
                 "Termino": "especialmente.",
@@ -3115,8 +3075,8 @@
             },
             "este": {
                 "Termino": "este",
-                "ni": 10,
-                "idf": 0.9652345818393234
+                "ni": 9,
+                "idf": 1.1783372412585125
             },
             "estilo": {
                 "Termino": "estilo",
@@ -3225,8 +3185,8 @@
             },
             "forma": {
                 "Termino": "forma",
-                "ni": 8,
-                "idf": 1.4043902550793355
+                "ni": 7,
+                "idf": 1.647698256069119
             },
             "frecuencia": {
                 "Termino": "frecuencia",
@@ -3740,8 +3700,8 @@
             },
             "l": {
                 "Termino": "l",
-                "ni": 2,
-                "idf": 3.5109619192773796
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "l.": {
                 "Termino": "l.",
@@ -3790,8 +3750,8 @@
             },
             "letra": {
                 "Termino": "letra",
-                "ni": 4,
-                "idf": 2.557995453120887
+                "ni": 3,
+                "idf": 2.9740047914670558
             },
             "letra.": {
                 "Termino": "letra.",
@@ -4143,6 +4103,11 @@
                 "ni": 3,
                 "idf": 2.9740047914670558
             },
+            "nombre": {
+                "Termino": "nombre",
+                "ni": 4,
+                "idf": 2.557995453120887
+            },
             "normal": {
                 "Termino": "normal",
                 "ni": 8,
@@ -4205,13 +4170,13 @@
             },
             "n\u00fameros": {
                 "Termino": "n\u00fameros",
-                "ni": 6,
-                "idf": 1.9142701259741162
+                "ni": 5,
+                "idf": 2.2129937233341983
             },
             "o": {
                 "Termino": "o",
-                "ni": 6,
-                "idf": 1.9142701259741162
+                "ni": 5,
+                "idf": 2.2129937233341983
             },
             "o.": {
                 "Termino": "o.",
@@ -4265,8 +4230,8 @@
             },
             "orden": {
                 "Termino": "orden",
-                "ni": 7,
-                "idf": 1.647698256069119
+                "ni": 6,
+                "idf": 1.9142701259741162
             },
             "origen": {
                 "Termino": "origen",
@@ -4305,8 +4270,8 @@
             },
             "p": {
                 "Termino": "p",
-                "ni": 3,
-                "idf": 2.9740047914670558
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "p.": {
                 "Termino": "p.",
@@ -4960,8 +4925,8 @@
             },
             "seg\u00fan": {
                 "Termino": "seg\u00fan",
-                "ni": 5,
-                "idf": 2.2129937233341983
+                "ni": 4,
+                "idf": 2.557995453120887
             },
             "selecciona": {
                 "Termino": "selecciona",
@@ -5237,6 +5202,11 @@
                 "Termino": "terminador",
                 "ni": 1,
                 "idf": 4.2976805486406855
+            },
+            "terminal": {
+                "Termino": "terminal",
+                "ni": 5,
+                "idf": 2.2129937233341983
             },
             "terminales.": {
                 "Termino": "terminales.",
@@ -5515,8 +5485,8 @@
             },
             "virtual": {
                 "Termino": "virtual",
-                "ni": 7,
-                "idf": 1.647698256069119
+                "ni": 6,
+                "idf": 1.9142701259741162
             },
             "visible": {
                 "Termino": "visible",
@@ -5695,8 +5665,8 @@
             },
             "*/": {
                 "Termino": "*/",
-                "ni": 4,
-                "idf": 2.557995453120887
+                "ni": 3,
+                "idf": 2.9740047914670558
             },
             "*argp": {
                 "Termino": "*argp",
@@ -5720,8 +5690,8 @@
             },
             "/*": {
                 "Termino": "/*",
-                "ni": 4,
-                "idf": 2.557995453120887
+                "ni": 3,
+                "idf": 2.9740047914670558
             },
             "/dev/vcsa*": {
                 "Termino": "/dev/vcsa*",
@@ -6285,8 +6255,8 @@
             },
             "bien": {
                 "Termino": "bien",
-                "ni": 3,
-                "idf": 2.9740047914670558
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "blank_timer": {
                 "Termino": "blank_timer",
@@ -6513,11 +6483,6 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
-            "console_ioctls(4)manual": {
-                "Termino": "console_ioctls(4)manual",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "consolefontdesc": {
                 "Termino": "consolefontdesc",
                 "ni": 1,
@@ -6537,11 +6502,6 @@
                 "Termino": "contiene",
                 "ni": 6,
                 "idf": 1.9142701259741162
-            },
-            "con\u00adsolas": {
-                "Termino": "con\u00adsolas",
-                "ni": 1,
-                "idf": 4.2976805486406855
             },
             "con\u00adsole_codes(4)": {
                 "Termino": "con\u00adsole_codes(4)",
@@ -7150,8 +7110,8 @@
             },
             "int": {
                 "Termino": "int",
-                "ni": 8,
-                "idf": 1.4043902550793355
+                "ni": 7,
+                "idf": 1.647698256069119
             },
             "int.": {
                 "Termino": "int.",
@@ -7578,11 +7538,6 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
-            "linuxconsole_ioctls(4)": {
-                "Termino": "linuxconsole_ioctls(4)",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "llamada": {
                 "Termino": "llamada",
                 "ni": 2,
@@ -7638,6 +7593,11 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
+            "manual": {
+                "Termino": "manual",
+                "ni": 6,
+                "idf": 1.9142701259741162
+            },
             "max_nr_consoles).": {
                 "Termino": "max_nr_consoles).",
                 "ni": 2,
@@ -7660,8 +7620,8 @@
             },
             "menores": {
                 "Termino": "menores",
-                "ni": 3,
-                "idf": 2.9740047914670558
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "menos": {
                 "Termino": "menos",
@@ -7670,8 +7630,8 @@
             },
             "menudo": {
                 "Termino": "menudo",
-                "ni": 3,
-                "idf": 2.9740047914670558
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "meta.": {
                 "Termino": "meta.",
@@ -7980,8 +7940,8 @@
             },
             "propietario": {
                 "Termino": "propietario",
-                "ni": 5,
-                "idf": 2.2129937233341983
+                "ni": 4,
+                "idf": 2.557995453120887
             },
             "proporciona": {
                 "Termino": "proporciona",
@@ -8220,8 +8180,8 @@
             },
             "sido": {
                 "Termino": "sido",
-                "ni": 4,
-                "idf": 2.557995453120887
+                "ni": 3,
+                "idf": 2.9740047914670558
             },
             "siendo": {
                 "Termino": "siendo",
@@ -8230,8 +8190,8 @@
             },
             "sigue": {
                 "Termino": "sigue",
-                "ni": 2,
-                "idf": 3.5109619192773796
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "sigwinch": {
                 "Termino": "sigwinch",
@@ -8440,8 +8400,8 @@
             },
             "tienen": {
                 "Termino": "tienen",
-                "ni": 9,
-                "idf": 1.1783372412585125
+                "ni": 8,
+                "idf": 1.4043902550793355
             },
             "tioclinux": {
                 "Termino": "tioclinux",
@@ -9170,8 +9130,8 @@
             },
             "character": {
                 "Termino": "character",
-                "ni": 6,
-                "idf": 1.9142701259741162
+                "ni": 5,
+                "idf": 2.2129937233341983
             },
             "character-attribute": {
                 "Termino": "character-attribute",
@@ -9248,6 +9208,11 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
+            "console": {
+                "Termino": "console",
+                "ni": 1,
+                "idf": 4.2976805486406855
+            },
             "console.": {
                 "Termino": "console.",
                 "ni": 1,
@@ -9255,11 +9220,6 @@
             },
             "consolechars(8)": {
                 "Termino": "consolechars(8)",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "consoles": {
-                "Termino": "consoles",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -9357,11 +9317,6 @@
                 "Termino": "describes",
                 "ni": 3,
                 "idf": 2.9740047914670558
-            },
-            "description": {
-                "Termino": "description",
-                "ni": 7,
-                "idf": 1.647698256069119
             },
             "desired": {
                 "Termino": "desired",
@@ -9833,11 +9788,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "ioctl'sioctl's": {
-                "Termino": "ioctl'sioctl's",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "is": {
                 "Termino": "is",
                 "ni": 7,
@@ -10010,8 +9960,8 @@
             },
             "many": {
                 "Termino": "many",
-                "ni": 3,
-                "idf": 2.9740047914670558
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "map": {
                 "Termino": "map",
@@ -10055,8 +10005,8 @@
             },
             "minor": {
                 "Termino": "minor",
-                "ni": 5,
-                "idf": 2.2129937233341983
+                "ni": 4,
+                "idf": 2.557995453120887
             },
             "mode.": {
                 "Termino": "mode.",
@@ -10082,11 +10032,6 @@
                 "Termino": "msec.",
                 "ni": 1,
                 "idf": 4.2976805486406855
-            },
-            "name": {
-                "Termino": "name",
-                "ni": 8,
-                "idf": 1.4043902550793355
             },
             "new": {
                 "Termino": "new",
@@ -10318,11 +10263,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "programmer's": {
-                "Termino": "programmer's",
-                "ni": 3,
-                "idf": 2.9740047914670558
-            },
             "programs": {
                 "Termino": "programs",
                 "ni": 2,
@@ -10405,8 +10345,8 @@
             },
             "request": {
                 "Termino": "request",
-                "ni": 2,
-                "idf": 3.5109619192773796
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "requests": {
                 "Termino": "requests",
@@ -11113,26 +11053,6 @@
                 "ni": 7,
                 "idf": 1.647698256069119
             },
-            "#include": {
-                "Termino": "#include",
-                "ni": 8,
-                "idf": 1.4043902550793355
-            },
-            "*data": {
-                "Termino": "*data",
-                "ni": 2,
-                "idf": 3.5109619192773796
-            },
-            "*flags);": {
-                "Termino": "*flags);",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "*program);": {
-                "Termino": "*program);",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "/dev/dsp56k": {
                 "Termino": "/dev/dsp56k",
                 "ni": 1,
@@ -11153,18 +11073,8 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
-            "55": {
-                "Termino": "55",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "<asm/dsp56k": {
                 "Termino": "<asm/dsp56k",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "<asm/dsp56k.h>": {
-                "Termino": "<asm/dsp56k.h>",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -11253,11 +11163,6 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
-            "cmd);": {
-                "Termino": "cmd);",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "command": {
                 "Termino": "command",
                 "ni": 4,
@@ -11277,11 +11182,6 @@
                 "Termino": "computers.",
                 "ni": 1,
                 "idf": 4.2976805486406855
-            },
-            "configuration": {
-                "Termino": "configuration",
-                "ni": 2,
-                "idf": 3.5109619192773796
             },
             "counted": {
                 "Termino": "counted",
@@ -11378,11 +11278,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "fd": {
-                "Termino": "fd",
-                "ni": 5,
-                "idf": 2.2129937233341983
-            },
             "files": {
                 "Termino": "files",
                 "ni": 6,
@@ -11458,18 +11353,8 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "interface": {
-                "Termino": "interface",
-                "ni": 3,
-                "idf": 2.9740047914670558
-            },
             "ioctl(2)": {
                 "Termino": "ioctl(2)",
-                "ni": 3,
-                "idf": 2.9740047914670558
-            },
-            "ioctl(int": {
-                "Termino": "ioctl(int",
                 "ni": 3,
                 "idf": 2.9740047914670558
             },
@@ -11487,11 +11372,6 @@
                 "Termino": "length",
                 "ni": 4,
                 "idf": 2.557995453120887
-            },
-            "length);": {
-                "Termino": "length);",
-                "ni": 1,
-                "idf": 4.2976805486406855
             },
             "linux/drivers/char/dsp56k": {
                 "Termino": "linux/drivers/char/dsp56k",
@@ -11512,11 +11392,6 @@
                 "Termino": "linux/include/asm-m68k/dsp56k.h",
                 "ni": 1,
                 "idf": 4.2976805486406855
-            },
-            "major": {
-                "Termino": "major",
-                "ni": 4,
-                "idf": 2.557995453120887
             },
             "member.": {
                 "Termino": "member.",
@@ -11618,11 +11493,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "read(int": {
-                "Termino": "read(int",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "receive": {
                 "Termino": "receive",
                 "ni": 1,
@@ -11673,16 +11543,6 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
-            "size_t": {
-                "Termino": "size_t",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "ssize_t": {
-                "Termino": "ssize_t",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "sta\u00adtus": {
                 "Termino": "sta\u00adtus",
                 "ni": 1,
@@ -11692,11 +11552,6 @@
                 "Termino": "stream",
                 "ni": 1,
                 "idf": 4.2976805486406855
-            },
-            "synopsis": {
-                "Termino": "synopsis",
-                "ni": 3,
-                "idf": 2.9740047914670558
             },
             "time": {
                 "Termino": "time",
@@ -11733,11 +11588,6 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
-            "void": {
-                "Termino": "void",
-                "ni": 3,
-                "idf": 2.9740047914670558
-            },
             "words.": {
                 "Termino": "words.",
                 "ni": 2,
@@ -11748,18 +11598,8 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "write(int": {
-                "Termino": "write(int",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "writ\u00adten": {
                 "Termino": "writ\u00adten",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "wsize);": {
-                "Termino": "wsize);",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -11893,16 +11733,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "first-in": {
-                "Termino": "first-in",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "first-out": {
-                "Termino": "first-out",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "indicated": {
                 "Termino": "indicated",
                 "ni": 2,
@@ -11958,6 +11788,11 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
+            "name": {
+                "Termino": "name",
+                "ni": 5,
+                "idf": 2.2129937233341983
+            },
             "named": {
                 "Termino": "named",
                 "ni": 3,
@@ -12010,8 +11845,8 @@
             },
             "part": {
                 "Termino": "part",
-                "ni": 3,
-                "idf": 2.9740047914670558
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "passed.": {
                 "Termino": "passed.",
@@ -12125,8 +11960,8 @@
             },
             "system.": {
                 "Termino": "system.",
-                "ni": 3,
-                "idf": 2.9740047914670558
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "thus": {
                 "Termino": "thus",
@@ -12235,8 +12070,8 @@
             },
             "configuraci\u00f3n": {
                 "Termino": "configuraci\u00f3n",
-                "ni": 7,
-                "idf": 1.647698256069119
+                "ni": 4,
+                "idf": 2.557995453120887
             },
             "creado": {
                 "Termino": "creado",
@@ -12273,11 +12108,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "full": {
-                "Termino": "full",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "full(4)": {
                 "Termino": "full(4)",
                 "ni": 1,
@@ -12287,11 +12117,6 @@
                 "Termino": "lecturas",
                 "ni": 3,
                 "idf": 2.9740047914670558
-            },
-            "lleno": {
-                "Termino": "lleno",
-                "ni": 2,
-                "idf": 3.5109619192773796
             },
             "mknod": {
                 "Termino": "mknod",
@@ -12485,13 +12310,13 @@
             },
             "discos": {
                 "Termino": "discos",
-                "ni": 3,
-                "idf": 2.9740047914670558
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "dispositivos": {
                 "Termino": "dispositivos",
-                "ni": 8,
-                "idf": 1.4043902550793355
+                "ni": 5,
+                "idf": 2.2129937233341983
             },
             "dis\u00adpositivo": {
                 "Termino": "dis\u00adpositivo",
@@ -12525,16 +12350,11 @@
             },
             "f\u00edsica.": {
                 "Termino": "f\u00edsica.",
-                "ni": 5,
-                "idf": 2.2129937233341983
+                "ni": 4,
+                "idf": 2.557995453120887
             },
             "generales": {
                 "Termino": "generales",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "hd": {
-                "Termino": "hd",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -12650,8 +12470,8 @@
             },
             "partici\u00f3n": {
                 "Termino": "partici\u00f3n",
-                "ni": 4,
-                "idf": 2.557995453120887
+                "ni": 3,
+                "idf": 2.9740047914670558
             },
             "parti\u00adcion": {
                 "Termino": "parti\u00adcion",
@@ -12660,18 +12480,18 @@
             },
             "primaria": {
                 "Termino": "primaria",
-                "ni": 2,
-                "idf": 3.5109619192773796
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "primarias": {
                 "Termino": "primarias",
-                "ni": 2,
-                "idf": 3.5109619192773796
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "raw": {
                 "Termino": "raw",
-                "ni": 4,
-                "idf": 2.557995453120887
+                "ni": 3,
+                "idf": 2.9740047914670558
             },
             "record": {
                 "Termino": "record",
@@ -12680,8 +12500,8 @@
             },
             "refiere": {
                 "Termino": "refiere",
-                "ni": 4,
-                "idf": 2.557995453120887
+                "ni": 3,
+                "idf": 2.9740047914670558
             },
             "root:disk": {
                 "Termino": "root:disk",
@@ -12695,8 +12515,8 @@
             },
             "segunda": {
                 "Termino": "segunda",
-                "ni": 6,
-                "idf": 1.9142701259741162
+                "ni": 5,
+                "idf": 2.2129937233341983
             },
             "ser\u00e1": {
                 "Termino": "ser\u00e1",
@@ -12715,8 +12535,8 @@
             },
             "tercera": {
                 "Termino": "tercera",
-                "ni": 3,
-                "idf": 2.9740047914670558
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "toman": {
                 "Termino": "toman",
@@ -14080,8 +13900,8 @@
             },
             "p.ej.": {
                 "Termino": "p.ej.",
-                "ni": 2,
-                "idf": 3.5109619192773796
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "papel": {
                 "Termino": "papel",
@@ -14260,8 +14080,8 @@
             },
             "root": {
                 "Termino": "root",
-                "ni": 3,
-                "idf": 2.9740047914670558
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "root.disk": {
                 "Termino": "root.disk",
@@ -14310,8 +14130,8 @@
             },
             "sigu\u00adiente:": {
                 "Termino": "sigu\u00adiente:",
-                "ni": 2,
-                "idf": 3.5109619192773796
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "sist.": {
                 "Termino": "sist.",
@@ -14320,8 +14140,8 @@
             },
             "sistema.": {
                 "Termino": "sistema.",
-                "ni": 7,
-                "idf": 1.647698256069119
+                "ni": 6,
+                "idf": 1.9142701259741162
             },
             "sistemas": {
                 "Termino": "sistemas",
@@ -14380,8 +14200,8 @@
             },
             "todav\u00eda": {
                 "Termino": "todav\u00eda",
-                "ni": 3,
-                "idf": 2.9740047914670558
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "uid": {
                 "Termino": "uid",
@@ -14498,20 +14318,10 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "intro": {
-                "Termino": "intro",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "intro(4)": {
                 "Termino": "intro(4)",
                 "ni": 1,
                 "idf": 4.2976805486406855
-            },
-            "introducci\u00f3n": {
-                "Termino": "introducci\u00f3n",
-                "ni": 2,
-                "idf": 3.5109619192773796
             },
             "p\u00e1gina!": {
                 "Termino": "p\u00e1gina!",
@@ -14638,11 +14448,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "<linux/if.h>": {
-                "Termino": "<linux/if.h>",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "<linux/ip": {
                 "Termino": "<linux/ip",
                 "ni": 1,
@@ -14655,11 +14460,6 @@
             },
             "<linux/ip_fwchains": {
                 "Termino": "<linux/ip_fwchains",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "<linux/ip_fwchains.h>": {
-                "Termino": "<linux/ip_fwchains.h>",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -14688,28 +14488,13 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "<netinet/in.h>": {
-                "Termino": "<netinet/in.h>",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "<sys/socket": {
                 "Termino": "<sys/socket",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "<sys/socket.h>": {
-                "Termino": "<sys/socket.h>",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "<sys/types": {
                 "Termino": "<sys/types",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "<sys/types.h>": {
-                "Termino": "<sys/types.h>",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -15372,6 +15157,11 @@
                 "Termino": "described",
                 "ni": 2,
                 "idf": 3.5109619192773796
+            },
+            "description": {
+                "Termino": "description",
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "destination": {
                 "Termino": "destination",
@@ -16058,6 +15848,11 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
+            "interface": {
+                "Termino": "interface",
+                "ni": 2,
+                "idf": 3.5109619192773796
+            },
             "interface).": {
                 "Termino": "interface).",
                 "ni": 1,
@@ -16333,11 +16128,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "ipproto_ip": {
-                "Termino": "ipproto_ip",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "isn't": {
                 "Termino": "isn't",
                 "ni": 1,
@@ -16497,6 +16287,11 @@
                 "Termino": "main\u00adtained",
                 "ni": 1,
                 "idf": 4.2976805486406855
+            },
+            "major": {
+                "Termino": "major",
+                "ni": 3,
+                "idf": 2.9740047914670558
             },
             "make": {
                 "Termino": "make",
@@ -17433,11 +17228,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "setsockopt": {
-                "Termino": "setsockopt",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "setsockopt(2)": {
                 "Termino": "setsockopt(2)",
                 "ni": 1,
@@ -17540,8 +17330,8 @@
             },
             "source": {
                 "Termino": "source",
-                "ni": 2,
-                "idf": 3.5109619192773796
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "space": {
                 "Termino": "space",
@@ -18735,8 +18525,8 @@
             },
             "capable": {
                 "Termino": "capable",
-                "ni": 2,
-                "idf": 3.5109619192773796
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "capitalization": {
                 "Termino": "capitalization",
@@ -18998,6 +18788,11 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
+            "configuration": {
+                "Termino": "configuration",
+                "ni": 1,
+                "idf": 4.2976805486406855
+            },
             "consider": {
                 "Termino": "consider",
                 "ni": 1,
@@ -19225,11 +19020,6 @@
             },
             "dict": {
                 "Termino": "dict",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "dictionaries": {
-                "Termino": "dictionaries",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -21490,8 +21280,8 @@
             },
             "direcciones": {
                 "Termino": "direcciones",
-                "ni": 6,
-                "idf": 1.9142701259741162
+                "ni": 5,
+                "idf": 2.2129937233341983
             },
             "e": {
                 "Termino": "e",
@@ -21575,8 +21365,8 @@
             },
             "puertos": {
                 "Termino": "puertos",
-                "ni": 4,
-                "idf": 2.557995453120887
+                "ni": 3,
+                "idf": 2.9740047914670558
             },
             "referencias": {
                 "Termino": "referencias",
@@ -21618,28 +21408,8 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "0-2.": {
-                "Termino": "0-2.",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "02": {
                 "Termino": "02",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "0x0278.": {
-                "Termino": "0x0278.",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "0x0378": {
-                "Termino": "0x0378",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "0x03bc": {
-                "Termino": "0x03bc",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -21648,18 +21418,8 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "220": {
-                "Termino": "220",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "<linux/lp": {
                 "Termino": "<linux/lp",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "<linux/lp.h>": {
-                "Termino": "<linux/lp.h>",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -21798,11 +21558,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "corresponden": {
-                "Termino": "corresponden",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "cox": {
                 "Termino": "cox",
                 "ni": 1,
@@ -21868,11 +21623,6 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
-            "espere": {
-                "Termino": "espere",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "exacto": {
                 "Termino": "exacto",
                 "ni": 1,
@@ -21887,6 +21637,11 @@
                 "Termino": "falsas",
                 "ni": 1,
                 "idf": 4.2976805486406855
+            },
+            "fd": {
+                "Termino": "fd",
+                "ni": 3,
+                "idf": 2.9740047914670558
             },
             "fija": {
                 "Termino": "fija",
@@ -21908,16 +21663,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "gran": {
-                "Termino": "gran",
-                "ni": 2,
-                "idf": 3.5109619192773796
-            },
-            "grupo": {
-                "Termino": "grupo",
-                "ni": 3,
-                "idf": 2.9740047914670558
-            },
             "haya": {
                 "Termino": "haya",
                 "ni": 2,
@@ -21933,11 +21678,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "impresoras": {
-                "Termino": "impresoras",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "influencia": {
                 "Termino": "influencia",
                 "ni": 1,
@@ -21948,11 +21688,6 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
-            "interrupci\u00f3n.": {
-                "Termino": "interrupci\u00f3n.",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "interrup\u00adciones": {
                 "Termino": "interrup\u00adciones",
                 "ni": 1,
@@ -21960,6 +21695,11 @@
             },
             "invertida": {
                 "Termino": "invertida",
+                "ni": 1,
+                "idf": 4.2976805486406855
+            },
+            "ioctl(int": {
+                "Termino": "ioctl(int",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -22018,23 +21758,8 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "lp": {
-                "Termino": "lp",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "lp(4)": {
                 "Termino": "lp(4)",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "lp.": {
-                "Termino": "lp.",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "lp[0-2]": {
-                "Termino": "lp[0-2]",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -22118,16 +21843,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "l\u00e1ser).": {
-                "Termino": "l\u00e1ser).",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "matriz": {
-                "Termino": "matriz",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "mejorado": {
                 "Termino": "mejorado",
                 "ni": 1,
@@ -22203,20 +21918,10 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "paralelo;": {
-                "Termino": "paralelo;",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "pasado": {
                 "Termino": "pasado",
                 "ni": 1,
                 "idf": 4.2976805486406855
-            },
-            "permisos": {
-                "Termino": "permisos",
-                "ni": 4,
-                "idf": 2.557995453120887
             },
             "privilegios": {
                 "Termino": "privilegios",
@@ -22235,11 +21940,6 @@
             },
             "pulso.": {
                 "Termino": "pulso.",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "puntos": {
-                "Termino": "puntos",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -22265,11 +21965,6 @@
             },
             "recibir": {
                 "Termino": "recibir",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "recomienda": {
-                "Termino": "recomienda",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -22323,11 +22018,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "sinopsis": {
-                "Termino": "sinopsis",
-                "ni": 4,
-                "idf": 2.557995453120887
-            },
             "sinpapel": {
                 "Termino": "sinpapel",
                 "ni": 1,
@@ -22370,11 +22060,6 @@
             },
             "torvalds.": {
                 "Termino": "torvalds.",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "tr\u00e1fico": {
-                "Termino": "tr\u00e1fico",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -22878,11 +22563,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "magic": {
-                "Termino": "magic",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "magic(4)": {
                 "Termino": "magic(4)",
                 "ni": 1,
@@ -22985,8 +22665,8 @@
             },
             "omite": {
                 "Termino": "omite",
-                "ni": 2,
-                "idf": 3.5109619192773796
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "opcionalmente": {
                 "Termino": "opcionalmente",
@@ -23268,11 +22948,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "<image.h>": {
-                "Termino": "<image.h>",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "<width>": {
                 "Termino": "<width>",
                 "ni": 1,
@@ -23370,11 +23045,6 @@
             },
             "begins.": {
                 "Termino": "begins.",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "bitmap": {
-                "Termino": "bitmap",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -23698,11 +23368,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "converting": {
-                "Termino": "converting",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "con\u00adcatenate": {
                 "Termino": "con\u00adcatenate",
                 "ni": 1,
@@ -23888,11 +23553,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "etc.).": {
-                "Termino": "etc.).",
-                "ni": 2,
-                "idf": 3.5109619192773796
-            },
             "event": {
                 "Termino": "event",
                 "ni": 1,
@@ -23915,11 +23575,6 @@
             },
             "follow": {
                 "Termino": "follow",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "formats": {
-                "Termino": "formats",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -24153,11 +23808,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "jpeg": {
-                "Termino": "jpeg",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "key.": {
                 "Termino": "key.",
                 "ni": 1,
@@ -24225,16 +23875,6 @@
             },
             "magenta": {
                 "Termino": "magenta",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "magick": {
-                "Termino": "magick",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "manipulation": {
-                "Termino": "manipulation",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -24465,11 +24105,6 @@
             },
             "pix\u00adels": {
                 "Termino": "pix\u00adels",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "platform-independent": {
-                "Termino": "platform-independent",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -24758,11 +24393,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "storing": {
-                "Termino": "storing",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "studio": {
                 "Termino": "studio",
                 "ni": 1,
@@ -24798,11 +24428,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "tiff": {
-                "Termino": "tiff",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "tile": {
                 "Termino": "tile",
                 "ni": 1,
@@ -24820,11 +24445,6 @@
             },
             "title": {
                 "Termino": "title",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "toolkit": {
-                "Termino": "toolkit",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -24878,11 +24498,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "utilities": {
-                "Termino": "utilities",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "value.": {
                 "Termino": "value.",
                 "ni": 1,
@@ -24923,11 +24538,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "window": {
-                "Termino": "window",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "within": {
                 "Termino": "within",
                 "ni": 2,
@@ -24935,11 +24545,6 @@
             },
             "x(1)": {
                 "Termino": "x(1)",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "xpm": {
-                "Termino": "xpm",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -25378,11 +24983,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "conectan": {
-                "Termino": "conectan",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "conector": {
                 "Termino": "conector",
                 "ni": 1,
@@ -25442,11 +25042,6 @@
                 "Termino": "datos.",
                 "ni": 2,
                 "idf": 3.5109619192773796
-            },
-            "descripci\u00f3n.": {
-                "Termino": "descripci\u00f3n.",
-                "ni": 1,
-                "idf": 4.2976805486406855
             },
             "diagrama": {
                 "Termino": "diagrama",
@@ -25783,10 +25378,10 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
-            "interfaz": {
-                "Termino": "interfaz",
-                "ni": 3,
-                "idf": 2.9740047914670558
+            "introducci\u00f3n": {
+                "Termino": "introducci\u00f3n",
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "izquierdo": {
                 "Termino": "izquierdo",
@@ -25840,16 +25435,6 @@
             },
             "mm": {
                 "Termino": "mm",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "mouse": {
-                "Termino": "mouse",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "mouse(4)": {
-                "Termino": "mouse(4)",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -26003,11 +25588,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "rs232/v24": {
-                "Termino": "rs232/v24",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "rts": {
                 "Termino": "rts",
                 "ni": 1,
@@ -26118,11 +25698,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "ver": {
-                "Termino": "ver",
-                "ni": 2,
-                "idf": 3.5109619192773796
-            },
             "voltios": {
                 "Termino": "voltios",
                 "ni": 1,
@@ -26180,11 +25755,6 @@
             },
             "null).": {
                 "Termino": "null).",
-                "ni": 2,
-                "idf": 3.5109619192773796
-            },
-            "sumidero": {
-                "Termino": "sumidero",
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
@@ -26473,11 +26043,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "fuente": {
-                "Termino": "fuente",
-                "ni": 3,
-                "idf": 2.9740047914670558
-            },
             "gener\u00adador": {
                 "Termino": "gener\u00adador",
                 "ni": 1,
@@ -26485,6 +26050,11 @@
             },
             "gen\u00aderaci\u00f3n": {
                 "Termino": "gen\u00aderaci\u00f3n",
+                "ni": 1,
+                "idf": 4.2976805486406855
+            },
+            "gran": {
+                "Termino": "gran",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -26512,6 +26082,11 @@
                 "Termino": "interaci\u00f3n",
                 "ni": 1,
                 "idf": 4.2976805486406855
+            },
+            "interfaz": {
+                "Termino": "interfaz",
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "literatura": {
                 "Termino": "literatura",
@@ -26592,11 +26167,6 @@
                 "Termino": "pueda",
                 "ni": 3,
                 "idf": 2.9740047914670558
-            },
-            "random": {
-                "Termino": "random",
-                "ni": 2,
-                "idf": 3.5109619192773796
             },
             "random(4)": {
                 "Termino": "random(4)",
@@ -26713,11 +26283,6 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
-            "urandom": {
-                "Termino": "urandom",
-                "ni": 2,
-                "idf": 3.5109619192773796
-            },
             "vulnerables": {
                 "Termino": "vulnerables",
                 "ni": 1,
@@ -26753,48 +26318,13 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "/dev/sda": {
-                "Termino": "/dev/sda",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "/dev/sdb3": {
-                "Termino": "/dev/sdb3",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "1-4": {
-                "Termino": "1-4",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "19": {
-                "Termino": "19",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "5-8": {
-                "Termino": "5-8",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "<linux/fs": {
                 "Termino": "<linux/fs",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "<linux/fs.h>": {
-                "Termino": "<linux/fs.h>",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "<linux/hdreg": {
                 "Termino": "<linux/hdreg",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "<linux/hdreg.h>": {
-                "Termino": "<linux/hdreg.h>",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -26812,11 +26342,6 @@
                 "Termino": "blkrrpart",
                 "ni": 1,
                 "idf": 4.2976805486406855
-            },
-            "bloque.": {
-                "Termino": "bloque.",
-                "ni": 2,
-                "idf": 3.5109619192773796
             },
             "cabezas*/": {
                 "Termino": "cabezas*/",
@@ -26843,38 +26368,13 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "corresponde": {
-                "Termino": "corresponde",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "crudos": {
-                "Termino": "crudos",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "cylinders;": {
                 "Termino": "cylinders;",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "detecci\u00f3n": {
-                "Termino": "detecci\u00f3n",
-                "ni": 2,
-                "idf": 3.5109619192773796
-            },
-            "devices": {
-                "Termino": "devices",
-                "ni": 2,
-                "idf": 3.5109619192773796
-            },
             "devuelta": {
                 "Termino": "devuelta",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "dicha": {
-                "Termino": "dicha",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -26898,11 +26398,6 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
-            "extendidas": {
-                "Termino": "extendidas",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "fdisk(1)": {
                 "Termino": "fdisk(1)",
                 "ni": 1,
@@ -26923,11 +26418,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "han": {
-                "Termino": "han",
-                "ni": 2,
-                "idf": 3.5109619192773796
-            },
             "hd_geometry": {
                 "Termino": "hd_geometry",
                 "ni": 1,
@@ -26942,11 +26432,6 @@
                 "Termino": "heads;",
                 "ni": 1,
                 "idf": 4.2976805486406855
-            },
-            "implementados.": {
-                "Termino": "implementados.",
-                "ni": 2,
-                "idf": 3.5109619192773796
             },
             "individuales": {
                 "Termino": "individuales",
@@ -26968,23 +26453,8 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "l\u00f3gicas\"": {
-                "Termino": "l\u00f3gicas\"",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "necesaria": {
                 "Termino": "necesaria",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "n\u00famero_partici\u00f3n": {
-                "Termino": "n\u00famero_partici\u00f3n",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "n\u00famero_unidad": {
-                "Termino": "n\u00famero_unidad",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -27003,11 +26473,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "scsi": {
-                "Termino": "scsi",
-                "ni": 2,
-                "idf": 3.5109619192773796
-            },
             "scsi(4)": {
                 "Termino": "scsi(4)",
                 "ni": 1,
@@ -27022,16 +26487,6 @@
                 "Termino": "scsi.",
                 "ni": 2,
                 "idf": 3.5109619192773796
-            },
-            "sd": {
-                "Termino": "sd",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "sdlp": {
-                "Termino": "sdlp",
-                "ni": 1,
-                "idf": 4.2976805486406855
             },
             "sectores*/": {
                 "Termino": "sectores*/",
@@ -27058,11 +26513,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "unidades": {
-                "Termino": "unidades",
-                "ni": 2,
-                "idf": 3.5109619192773796
-            },
             "ve": {
                 "Termino": "ve",
                 "ni": 1,
@@ -27085,26 +26535,6 @@
             },
             "*).": {
                 "Termino": "*).",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "*)arg3]": {
-                "Termino": "*)arg3]",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "*)mt_cmd": {
-                "Termino": "*)mt_cmd",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "*)mt_pos": {
-                "Termino": "*)mt_pos",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "*)mt_status": {
-                "Termino": "*)mt_status",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -27255,11 +26685,6 @@
             },
             "<sys/mtio": {
                 "Termino": "<sys/mtio",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "<sys/mtio.h>": {
-                "Termino": "<sys/mtio.h>",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -27552,6 +26977,11 @@
                 "Termino": "block",
                 "ni": 2,
                 "idf": 3.5109619192773796
+            },
+            "bloque.": {
+                "Termino": "bloque.",
+                "ni": 1,
+                "idf": 4.2976805486406855
             },
             "booleanas": {
                 "Termino": "booleanas",
@@ -28093,6 +27523,11 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
+            "descripci\u00f3n": {
+                "Termino": "descripci\u00f3n",
+                "ni": 1,
+                "idf": 4.2976805486406855
+            },
             "descrito": {
                 "Termino": "descrito",
                 "ni": 1,
@@ -28393,6 +27828,11 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
+            "etc.).": {
+                "Termino": "etc.).",
+                "ni": 1,
+                "idf": 4.2976805486406855
+            },
             "evitar": {
                 "Termino": "evitar",
                 "ni": 1,
@@ -28497,6 +27937,11 @@
                 "Termino": "forsyth.",
                 "ni": 1,
                 "idf": 4.2976805486406855
+            },
+            "fuente": {
+                "Termino": "fuente",
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "f\u00edsicamente": {
                 "Termino": "f\u00edsicamente",
@@ -28603,6 +28048,11 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
+            "grupo": {
+                "Termino": "grupo",
+                "ni": 2,
+                "idf": 3.5109619192773796
+            },
             "habilite": {
                 "Termino": "habilite",
                 "ni": 1,
@@ -28610,6 +28060,11 @@
             },
             "habili\u00adtado": {
                 "Termino": "habili\u00adtado",
+                "ni": 1,
+                "idf": 4.2976805486406855
+            },
+            "han": {
+                "Termino": "han",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -28840,6 +28295,11 @@
             },
             "lleg\u00f3": {
                 "Termino": "lleg\u00f3",
+                "ni": 1,
+                "idf": 4.2976805486406855
+            },
+            "lleno": {
+                "Termino": "lleno",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -29708,6 +29168,11 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
+            "permisos": {
+                "Termino": "permisos",
+                "ni": 3,
+                "idf": 2.9740047914670558
+            },
             "permiten": {
                 "Termino": "permiten",
                 "ni": 1,
@@ -30018,6 +29483,11 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
+            "scsi": {
+                "Termino": "scsi",
+                "ni": 1,
+                "idf": 4.2976805486406855
+            },
             "scsi-1": {
                 "Termino": "scsi-1",
                 "ni": 1,
@@ -30273,6 +29743,11 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
+            "unidades": {
+                "Termino": "unidades",
+                "ni": 1,
+                "idf": 4.2976805486406855
+            },
             "unidades.": {
                 "Termino": "unidades.",
                 "ni": 1,
@@ -30310,6 +29785,11 @@
             },
             "vari\u00adable": {
                 "Termino": "vari\u00adable",
+                "ni": 1,
+                "idf": 4.2976805486406855
+            },
+            "ver": {
+                "Termino": "ver",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -30553,11 +30033,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "ttys": {
-                "Termino": "ttys",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "ttys[0-3]": {
                 "Termino": "ttys[0-3]",
                 "ni": 1,
@@ -30773,6 +30248,11 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
+            "random": {
+                "Termino": "random",
+                "ni": 1,
+                "idf": 4.2976805486406855
+            },
             "reads": {
                 "Termino": "reads",
                 "ni": 1,
@@ -30867,6 +30347,11 @@
                 "Termino": "vulnerable",
                 "ni": 1,
                 "idf": 4.2976805486406855
+            },
+            "#include": {
+                "Termino": "#include",
+                "ni": 2,
+                "idf": 3.5109619192773796
             },
             "$[$x+128];": {
                 "Termino": "$[$x+128];",
@@ -31213,16 +30698,6 @@
                 "ni": 2,
                 "idf": 3.5109619192773796
             },
-            "vcs": {
-                "Termino": "vcs",
-                "ni": 2,
-                "idf": 3.5109619192773796
-            },
-            "vcsa": {
-                "Termino": "vcsa",
-                "ni": 2,
-                "idf": 3.5109619192773796
-            },
             "virtual.": {
                 "Termino": "virtual.",
                 "ni": 2,
@@ -31368,18 +30843,8 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "[io=b": {
-                "Termino": "[io=b",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "[max": {
                 "Termino": "[max",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "[name=n": {
-                "Termino": "[name=n",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -31410,11 +30875,6 @@
             },
             "au": {
                 "Termino": "au",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "b..]": {
-                "Termino": "b..]",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -31510,6 +30970,11 @@
             },
             "detalles": {
                 "Termino": "detalles",
+                "ni": 1,
+                "idf": 4.2976805486406855
+            },
+            "detecci\u00f3n": {
+                "Termino": "detecci\u00f3n",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -31643,11 +31108,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "gis": {
-                "Termino": "gis",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "habilitarlas": {
                 "Termino": "habilitarlas",
                 "ni": 1,
@@ -31678,11 +31138,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "i..]": {
-                "Termino": "i..]",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "ifconfig(8)": {
                 "Termino": "ifconfig(8)",
                 "ni": 1,
@@ -31690,6 +31145,11 @@
             },
             "ifconfig(8)).": {
                 "Termino": "ifconfig(8)).",
+                "ni": 1,
+                "idf": 4.2976805486406855
+            },
+            "implementados.": {
+                "Termino": "implementados.",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -31723,11 +31183,6 @@
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
-            "insmod": {
-                "Termino": "insmod",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
             "insmod(8)": {
                 "Termino": "insmod(8)",
                 "ni": 1,
@@ -31750,11 +31205,6 @@
             },
             "io": {
                 "Termino": "io",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "irq=i": {
-                "Termino": "irq=i",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -31855,11 +31305,6 @@
             },
             "m\u00f3dulo": {
                 "Termino": "m\u00f3dulo",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "n..]": {
-                "Termino": "n..]",
                 "ni": 1,
                 "idf": 4.2976805486406855
             },
@@ -32025,11 +31470,6 @@
             },
             "wavelan_cs(4)": {
                 "Termino": "wavelan_cs(4)",
-                "ni": 1,
-                "idf": 4.2976805486406855
-            },
-            "wavelan_cs.o": {
-                "Termino": "wavelan_cs.o",
                 "ni": 1,
                 "idf": 4.2976805486406855
             }

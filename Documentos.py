@@ -39,19 +39,20 @@ class Documents:
     
     #Dada la lista filtrada del documentos
     def docCalcs(self,listDoc):
-        
+
         alphabeticList = sorted(set(listDoc))
         self.dic = dict((term,listDoc.count(term)) for term in set(listDoc))
         self.cantTerms = len(self.dic)
         self.listPares(alphabeticList,self.dic)
-        
-        if len(listDoc) <= 200:
+
+        if len(listDoc) < 200:
             self.descrip = listDoc
+            return
+
         else:
-            i = 0
-            while i < 200:
-                self.descrip.append(listDoc[i])
-                i = i + 1
+            self.descrip = listDoc[:200]
+            return
+
 
     def listPares(self,alphList,dic):
         
