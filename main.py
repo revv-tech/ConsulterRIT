@@ -55,6 +55,7 @@ def menuHerramientaInsp():
         print("\n")
         return menu()
 
+
 try :
     jsonReader()
 except(FileNotFoundError):

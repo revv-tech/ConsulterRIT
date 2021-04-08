@@ -162,6 +162,3 @@ def carpetListFilter(listFiles):
             correctFiles.append(elem)
 
     return correctFiles
-
-
-#directoryRunner()

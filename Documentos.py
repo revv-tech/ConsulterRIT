@@ -77,4 +77,3 @@ class Documents:
             "Pares" : self.dic
         }
         return
-

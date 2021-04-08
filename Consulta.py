@@ -167,14 +167,3 @@ def jsonToObjects(dicDocs, dicColec, dicVoc):
 
     return
 
-
-def main():
-    directoryRunner()
-    consulta = "compresión de archivos y manejo de archivos comprimidos.".lower()
-    dict = sortDict(getSimDQ(consulta))
-    print(dict)
-    createConsultas(dict, 2, "prueba", consulta)
-
-
-
-

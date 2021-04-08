@@ -58,8 +58,8 @@ class Coleccion:
                 pathDoc = self.path + "/" + doc
                 # Lista filtrada con los terminos de doc
                 listaDoc = self.filterTerms(self.leerDoc(pathDoc))
-
                 # Cortar
+                print(doc)
                 listaDoc = self.cutDescrip(listaDoc)
 
                 # Nuevo Doc
@@ -80,14 +80,14 @@ class Coleccion:
             return
     def cutDescrip(self,lista):
         #print(lista)
-
-        while True:
-            if lista[0] == "description" or lista[0] == "descripción":
-
+        try:
+            while True:
+                if lista[0] == "description" or lista[0] == "descripción" or lista[0] == 'DDEESSCCRRIIPPTTIIOONN'.lower():
+                    lista = lista[1:]
+                    break
                 lista = lista[1:]
-
-                break
-            lista = lista[1:]
+        except(IndexError):
+            print("Archivo sin descripción")
         return lista
 
     def documentLoader(self,dicDocs):

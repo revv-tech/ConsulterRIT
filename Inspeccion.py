@@ -1,6 +1,5 @@
 from Consulta import searchDoc
-from Indizacion import VOCABULARY, directoryRunner
-
+from Indizacion import VOCABULARY
 
 def printDoc(pDocName):
     doc = searchDoc(pDocName)
@@ -13,7 +12,7 @@ def printDoc(pDocName):
 
 def printTerms(pTerm):
     idx = 0
-    for i in range (0, len(VOCABULARY.terms)):
+    for i in range(0, len(VOCABULARY.terms)):
         if VOCABULARY.terms[i].term == pTerm:
             idx = i - 5
             break
