@@ -44,7 +44,7 @@ class Vocabulario:
         print("Cantidad Documentos: ", self.N)
         print("Vocabulario General: ")
         for term in self.terms:
-            term.print()
+            term.printTerm()
 
 
     def toJsonFile(self):
