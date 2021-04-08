@@ -1,5 +1,5 @@
 from Consulta import searchDoc
-from Indizacion import VOCABULARY
+from Indizacion import VOCABULARY, directoryRunner
 
 
 def printDoc(pDocName):
@@ -12,13 +12,13 @@ def printDoc(pDocName):
 
 
 def printTerms(pTerm):
-    try:
-        idx = VOCABULARY.terms.index(pTerm) - 5
-        if idx < 0:
-            idx = 0
-    except(ValueError):
-        print("No se encontro el termino solicitado")
-        return
+    idx = 0
+    for i in range (0, len(VOCABULARY.terms)):
+        if VOCABULARY.terms[i].term == pTerm:
+            idx = i - 5
+            break
+    if idx < 0:
+        idx = 0
     for j in range(0, 10):
         try:
             VOCABULARY.terms[idx + j].printTerm()

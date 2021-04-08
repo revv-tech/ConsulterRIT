@@ -1,2 +1,0 @@
-Cosnulta: compresión de archivos y manejo de archivos comprimidos.
-Escalafon: 

@@ -100,12 +100,11 @@ def directoryRunner():
     # Cantidad de Documentos
     N = 0
     # Crea vocabulario
-    i = 1
     global VOCABULARY
     # Ciclo que crea listas con los nombres de los documentos que si son aceptados para el proceso
-    while i > 0:
+    while carpetsMan_ES:
         # Saca el nombre de cada subcarpeta de Man.es
-        nameCarpet = "man4"
+        nameCarpet = carpetsMan_ES[0]
         # Saca la lista de Archivos de Man.es
         contentCarpet = os.listdir(path + "/" + nameCarpet)
         # Lista con los documentos que deben ser aceptados por la terminacion correcta
@@ -124,7 +123,6 @@ def directoryRunner():
         # Agregar a COLECCTIONS
         COLECCTIONS.append(newColeccion)
         VOCABULARY.avgdl += COLECCTIONS[0].longitudAvg  # DESCOMPONER LISTA
-        i -= 1
         carpetsMan_ES = carpetsMan_ES[1:]
     # Agrega la cantidad de documentos al vocabulario
     VOCABULARY.N = N

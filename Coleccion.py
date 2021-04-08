@@ -96,6 +96,7 @@ class Coleccion:
                 newDoc = Documents(dicDocs[doc]["DocID"],dicDocs[doc]["Path"],doc, dicDocs[doc]["Descripcion"], dicDocs[doc]["Pares"], dicDocs[doc]["Cantidad Terminos"], dicDocs[doc]["Longitud"])
                 self.listaDocsData.append(newDoc)
         return
+
     # Funcion que agrega los terminos de cada documento
     def termAdder(self, listaPares):
 
@@ -183,8 +184,8 @@ class Coleccion:
                     for fragment in listSplited:
                         if re.match(".?[A-Za-z].?", fragment):
                             listWords.append(fragment)
-        else:
-            listWords.remove(word)
+            else:
+                listWords.remove(word)
         return
 
     def searchParameters(self, listWords, word):
@@ -193,11 +194,11 @@ class Coleccion:
             listWords.append("@" + word[2:])
             listWords.remove(word)
         return
-      
+
     def deleteChars(self, word):
         if word[0] == '\"' or word[0] == '(':
             word = word[1:]
-        if re.match("[\":]", word[-1:]):
+        if re.match("[\":;]", word[-1:]):
             word = word[:-1]
         if word[-1:] == ')' and not re.search("\(", word):
             word = word[:-1]

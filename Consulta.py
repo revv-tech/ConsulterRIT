@@ -177,37 +177,4 @@ def main():
 
 
 
-def menu():
-    print("----------------------------------------------------------------------------------------------------\n")
-    print("1: Ingresar consulta\n")
-    print("2: Herramienta Inspeccion\n")
-    print("3: Indexar\n")
-    print("----------------------------------------------------------------------------------------------------\n")
-    n = int(input("Ingresar n: "))
-    if n == 1:
-        return menuConsulta()
-    elif n == 2:
-        return
-    else:
-        return
 
-
-def menuConsulta():
-    print("----------------------------------------------------------------------------------------------------\n")
-    print("                                               CONSULTA\n")
-    print("----------------------------------------------------------------------------------------------------\n")
-    indice = str(input("Ingresar ruta al directorio: "))
-    print("\n")
-    numDocs = int(input("Cantidad de Documentos: "))
-    print("\n")
-    resultado = str(input("Ingresar nombre de Archivos resultado: "))
-    print("\n")
-    consulta = str(input("Ingresar consulta: ")).lower()
-    dict = sortDict(getSimDQ(consulta))
-    print("----------------------------------------------------------------------------------------------------")
-    createConsultas(dict, numDocs, resultado, consulta)
-
- 
-
-
-menu()
