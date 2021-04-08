@@ -26,7 +26,7 @@ class Termino:
     def addNi(self):
         self.ni = self.ni + 1
 
-    def print(self):
+    def printTerm(self):
         print("")
         print("Termino: ", self.term)
         print("Cantidad de Documentos (ni): ",self.ni)
