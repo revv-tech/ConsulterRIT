@@ -73,7 +73,7 @@ def sortDict(pDict):
 # Creador de archivos
 
 def createHTML(pDict, pCant, pName, pConsult):
-    newHTML = open("../ConsulterRIT/consultas/" + pName + ".html", 'w')
+    newHTML = open("../ConsulterRIT/Consultas/" + pName + ".html", 'w')
     msg = "<html>" \
           "<head>" \
           "<title>Consulta: " + pConsult + "</title>" \
@@ -110,7 +110,7 @@ def searchDoc(pName):
 
 
 def createTXT(pDict, pName, pConsult):
-    newTXT = open("../ConsulterRIT/consultas/" + pName + ".esc.txt", 'w')
+    newTXT = open("../ConsulterRIT/Consultas/" + pName + ".esc.txt", 'w')
     msg = "Cosnulta: " + pConsult + "\n" \
                                     "Escalafon: \n"
     i = 1
