@@ -1,10 +1,6 @@
-from Coleccion import Coleccion
-from Documentos import Documents
-from Vocabulario import Vocabulario
-from Indizacion import VOCABULARY
-from Indizacion import COLECCTIONS
-
 from Consulta import searchDoc
+from Indizacion import VOCABULARY
+
 
 def printDoc(pDocName):
     doc = searchDoc(pDocName)
@@ -14,8 +10,8 @@ def printDoc(pDocName):
         print("No se encontro el docuento solicitado")
     return
 
-def getTerms(pTerm):
 
+def printTerms(pTerm):
     try:
         idx = VOCABULARY.terms.index(pTerm) - 5
         if idx < 0:
@@ -23,11 +19,10 @@ def getTerms(pTerm):
     except(ValueError):
         print("No se encontro el termino solicitado")
         return
-    for j in range (0, 10):
+    for j in range(0, 10):
         try:
-            VOCABULARY.terms[idx+j].printTerm()
+            VOCABULARY.terms[idx + j].printTerm()
         except(IndexError):
             print(j)
             break
     return
-
