@@ -1,5 +1,4 @@
-from Consulta import searchDoc
-from Indizacion import VOCABULARY
+from Consulta import searchDoc, indexTerm, printTerm
 
 def printDoc(pDocName):
     doc = searchDoc(pDocName)
@@ -11,16 +10,10 @@ def printDoc(pDocName):
 
 
 def printTerms(pTerm):
-    idx = 0
-    for i in range(0, len(VOCABULARY.terms)):
-        if VOCABULARY.terms[i].term == pTerm:
-            idx = i - 5
-            break
-    if idx < 0:
-        idx = 0
+    idx = indexTerm(pTerm)
     for j in range(0, 10):
         try:
-            VOCABULARY.terms[idx + j].printTerm()
+            printTerm(idx + j)
         except(IndexError):
             print(j)
             break

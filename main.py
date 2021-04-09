@@ -6,6 +6,7 @@ def menu():
     print("1: Ingresar consulta\n")
     print("2: Herramienta Inspeccion\n")
     print("3: Indexar\n")
+    print("0: Salir\n")
     print("----------------------------------------------------------------------------------------------------\n")
     n = int(input("Ingresar n: "))
     if n == 1:
@@ -15,6 +16,8 @@ def menu():
     elif n == 3:
         directoryRunner()
         return menu()
+    elif n == 0:
+        return "Fin"
     else:
         return menu()
 

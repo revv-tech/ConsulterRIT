@@ -8,8 +8,6 @@ from Indizacion import directoryRunner
 from Terminos import Termino
 from Vocabulario import Vocabulario
 
-#COLECCTIONS = COLECCTIONS
-#VOCABULARY = VOCABULARY
 
 k = 1.2
 b = 0.75
@@ -40,8 +38,8 @@ def getIDF(pTerm):
 
 
 def getFreqFunct(pTerm, pNumDoc, pNumColecction):
-    if pTerm in COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].dic:
-        freq = COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].dic[pTerm]
+    if pTerm in COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].pares:
+        freq = COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].pares[pTerm]
         denominador = freq * (k + 1)
         divisor = freq + k * (
                 1 - b + b * (COLECCTIONS[pNumColecction].listaDocsData[pNumDoc].cantTerms / VOCABULARY.avgdl))
@@ -107,6 +105,19 @@ def searchDoc(pName):
             if document.name == pName:
                 return document
     return -1
+
+def indexTerm(pTerm):
+    for i in range(0, len(VOCABULARY.terms)):
+        if VOCABULARY.terms[i].term == pTerm:
+            idx = i - 5
+            break
+    if idx < 0:
+        idx = 0
+    return idx
+
+def printTerm(pIdx):
+    VOCABULARY.terms[pIdx].printTerm()
+    return
 
 
 def createTXT(pDict, pName, pConsult):
