@@ -1,6 +1,6 @@
 {
     "man1": {
-        "Path": "../ConsulterRIT/man.es/man1",
+        "Path": "../Programa/man.es/man1",
         "CanDocs": 1266,
         "LongitudAvg": 1166.1595576619272,
         "Nombres Docs": [
@@ -1273,7 +1273,7 @@
         ]
     },
     "man2": {
-        "Path": "../ConsulterRIT/man.es/man2",
+        "Path": "../Programa/man.es/man2",
         "CanDocs": 260,
         "LongitudAvg": 267.2,
         "Nombres Docs": [
@@ -1540,7 +1540,7 @@
         ]
     },
     "man3": {
-        "Path": "../ConsulterRIT/man.es/man3",
+        "Path": "../Programa/man.es/man3",
         "CanDocs": 2139,
         "LongitudAvg": 592.9995324918186,
         "Nombres Docs": [
@@ -3686,7 +3686,7 @@
         ]
     },
     "man4": {
-        "Path": "../ConsulterRIT/man.es/man4",
+        "Path": "../Programa/man.es/man4",
         "CanDocs": 31,
         "LongitudAvg": 781.8064516129032,
         "Nombres Docs": [
@@ -3724,7 +3724,7 @@
         ]
     },
     "man5": {
-        "Path": "../ConsulterRIT/man.es/man5",
+        "Path": "../Programa/man.es/man5",
         "CanDocs": 148,
         "LongitudAvg": 1132.081081081081,
         "Nombres Docs": [
@@ -3879,7 +3879,7 @@
         ]
     },
     "man6": {
-        "Path": "../ConsulterRIT/man.es/man6",
+        "Path": "../Programa/man.es/man6",
         "CanDocs": 8,
         "LongitudAvg": 793.625,
         "Nombres Docs": [
@@ -3894,7 +3894,7 @@
         ]
     },
     "man7": {
-        "Path": "../ConsulterRIT/man.es/man7",
+        "Path": "../Programa/man.es/man7",
         "CanDocs": 68,
         "LongitudAvg": 1432.8235294117646,
         "Nombres Docs": [
@@ -3969,7 +3969,7 @@
         ]
     },
     "man8": {
-        "Path": "../ConsulterRIT/man.es/man8",
+        "Path": "../Programa/man.es/man8",
         "CanDocs": 320,
         "LongitudAvg": 656.9375,
         "Nombres Docs": [
@@ -4296,13 +4296,13 @@
         ]
     },
     "man9": {
-        "Path": "../ConsulterRIT/man.es/man9",
+        "Path": "../Programa/man.es/man9",
         "CanDocs": 0,
         "LongitudAvg": 0,
         "Nombres Docs": []
     },
     "mann": {
-        "Path": "../ConsulterRIT/man.es/mann",
+        "Path": "../Programa/man.es/mann",
         "CanDocs": 0,
         "LongitudAvg": 0,
         "Nombres Docs": []
