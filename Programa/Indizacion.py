@@ -94,7 +94,7 @@ nameFile = "C:/Users/Marco/Desktop/Documentos TEC/ConsulterRIT/man.es/man1/411to
 
 def directoryRunner():
     # Path
-    path = "../ConsulterRIT/man.es"
+    path = "../Programa/man.es"
     # Subcarpetas de Man.es
     carpetsMan_ES = os.listdir(path)
     # Cantidad de Documentos
@@ -146,11 +146,11 @@ def fileCreator():
         colecciones[coleccion.name] = coleccion.jsonFile
         documentos.update(coleccion.docsToJson())
 
-    with open("../ConsulterRIT/Indizacion/documentos.json", 'w') as file:
+    with open("../Programa/Indizacion/documentos.json", 'w') as file:
         json.dump(documentos, file, indent=4, sort_keys=False)
-    with open("../ConsulterRIT/Indizacion/colecciones.json", 'w') as file:
+    with open("../Programa/Indizacion/colecciones.json", 'w') as file:
         json.dump(colecciones, file, indent=4, sort_keys=False)
-    with open("../ConsulterRIT/Indizacion/vocabulario.json", 'w') as file:
+    with open("../Programa/Indizacion/vocabulario.json", 'w') as file:
         json.dump(vocabulario, file, indent=4, sort_keys=False)
 
 # Filtrador de Lista de Documentos para que tengan terminacion correcta

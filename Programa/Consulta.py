@@ -71,7 +71,7 @@ def sortDict(pDict):
 # Creador de archivos
 
 def createHTML(pDict, pCant, pName, pConsult):
-    newHTML = open("../ConsulterRIT/Consultas/" + pName + ".html", 'w')
+    newHTML = open("../Programa/Consultas/" + pName + ".html", 'w')
     msg = "<html>" \
           "<head>" \
           "<title>Consulta: " + pConsult + "</title>" \
@@ -121,7 +121,7 @@ def printTerm(pIdx):
 
 
 def createTXT(pDict, pName, pConsult):
-    newTXT = open("../ConsulterRIT/Consultas/" + pName + ".esc.txt", 'w')
+    newTXT = open("../Programa/Consultas/" + pName + ".esc.txt", 'w')
     msg = "Cosnulta: " + pConsult + "\n" \
                                     "Escalafon: \n"
     i = 1
@@ -145,11 +145,11 @@ def createConsultas(pDict, pCant, pName="consulta", pConsult=''):
 
 # Creador de archivos
 def jsonReader():
-    with open("../ConsulterRIT/Indizacion/documentos.json") as file:
+    with open("../Programa/Indizacion/documentos.json") as file:
         dicDocs = json.load(file)
-    with open("../ConsulterRIT/Indizacion/colecciones.json") as file:
+    with open("../Programa/Indizacion/colecciones.json") as file:
         dicColec = json.load(file)
-    with open("../ConsulterRIT/Indizacion/vocabulario.json") as file:
+    with open("../Programa/Indizacion/vocabulario.json") as file:
         dicVoc = json.load(file)
 
     jsonToObjects(dicDocs, dicColec, dicVoc)
